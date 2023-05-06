@@ -1,0 +1,42 @@
+.side_menu {
+    border-right: 1px solid #707070;
+    box-shadow: 0 0 10px 2px #707070;
+    display: flex;
+    flex-direction: column;
+    //max-width: 10%;
+    width: auto;
+    padding: 15px;
+    white-space: nowrap;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    img {
+        max-width: 48px;
+    }
+    img#logo-side {
+        max-width: 70px;
+    }
+    button {
+        background: #fff;
+        border: none;
+        margin: 5px 0;
+        border-radius: 15px;
+        padding: 10px;
+    }
+    button:last-child {
+        position: absolute;
+        bottom:15px;
+    }
+    button.active {
+        border: 1px solid #707070;
+        box-shadow: inset 0 0 10px 2px #aaa;
+    }
+    span {
+        display: block;
+        font-family: "UTSansBold";
+        font-size: 18px;
+    }
+}

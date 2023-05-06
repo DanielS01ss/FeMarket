@@ -1,0 +1,457 @@
+@media (min-width: 800px) and (max-width: 1920px) {
+    body {
+      overflow: hidden;
+      background-color: var(--bg-color);
+      background-repeat: repeat;
+      background-size: 100vw 100vh;
+    }
+  
+    .logo-container {
+      position: absolute;
+      top: 153.88px;
+      left: 628.89px;
+    }
+  
+    .Agora_logo_light {
+      width: 152.11px;
+      height: 175.62px;
+      object-fit: contain;
+    }
+  
+    .writing-container {
+      position: absolute;
+      display: block;
+      top: 229px;
+      left: 790px;
+      right: auto;
+    }
+  
+    .writing {
+      width: 742px;
+      height: 210px;
+      object-fit: contain;
+    }
+  
+    .blurs-container {
+      position: fixed;
+      top: 129.88px;
+      left: -736.73px;
+      overflow: hidden;
+    }
+  
+    .blurs {
+      width: 1798.73px;
+      height: 1662.36px;
+      object-fit: contain;
+      overflow: hidden;
+    }
+  
+    .signup-btn {
+      position: absolute;
+      height: 61px;
+      width: 198px;
+      top: 0;
+      margin-top: 31px;
+      margin-right: 338.1px;
+      right: 0;
+      cursor: pointer;
+      border: 1px var(--button-color) solid;
+      border-radius: 18px;
+      color: var(--button-writting-color);
+      background-color: var(--button-color);
+      font-size: 25px;
+      font-weight: 700;
+      font-family: 'UT-Sans-TFF', sans-serif;
+    }
+  
+  
+    .signup-btn:hover {
+      background-color: var(--button-writting-color);
+      color: var(--button-color);
+    }
+  
+    .login-btn {
+      position: absolute;
+      height: 61px;
+      width: 198px;
+      top: 0;
+      margin-top: 31px;
+      margin-right: 115.1px;
+      right: 0;
+      cursor: pointer;
+      border: 1px solid var(--button-color);
+      border-radius: 18px;
+      color: var(--button-writting-color);
+      background-color: var(--button-color);
+      font-size: 25px;
+      font-weight: 700;
+      font-family: 'UT-Sans-TFF', sans-serif;
+    }
+  
+    .login-btn:hover {
+      background-color: var(--button-writting-color);
+      color: var(--button-color);
+    }
+  
+    .darkmode-container {
+      display: flex;
+      position: absolute;
+      top: 38px;
+      right: 35px;
+      cursor: pointer;
+      border: 0px;
+      background-color: inherit;
+      border-radius: 50px;
+    }
+  
+    .darkmode {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .lightmode-container {
+      display: hidden;
+      position: absolute;
+      top: 38px;
+      right: 35px;
+      cursor: pointer;
+      border: 0px;
+      background-color: inherit;
+      border-radius: 50px;
+    }
+  
+    .lightmode {
+      width: 50px;
+      height: 50px;
+      background: var(--bg-color);
+    }
+  
+    .IPad-Site-name {
+      display: none;
+    }
+  
+    .IPad-Motto {
+      display: none;
+    }
+  
+    .IPad-Choice {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    body {
+      overflow: hidden;
+      background-color: var(--bg-color);
+      background-repeat: repeat;
+      background-size: 100vw 100vh;
+    }
+  
+    .logo-container {
+      position: relative;
+      top: 112.71px;
+      left: 308px;
+    }
+  
+    .Agora_logo_light {
+      width: 152.11px;
+      height: 175.62px;
+      object-fit: contain;
+      fill: var(--text-color);
+    }
+  
+    .blurs-container {
+      position: fixed;
+      top: -53.12px;
+      left: -883.73px;
+      overflow: hidden;
+    }
+  
+    .blurs {
+      width: 1811.73px;
+      height: 1677.36px;
+      object-fit: contain;
+      overflow: hidden;
+    }
+  
+    .writing-container {
+      display: none;
+      top: 229px;
+      left: 790px;
+    }
+  
+    .writing {
+      width: 742px;
+      height: 210px;
+      object-fit: contain;
+    }
+  
+  
+    .signup-btn {
+      position: absolute;
+      height: 81px;
+      width: 356.19px;
+      top: 576.37px;
+      left: 206px;
+      cursor: pointer;
+      border: 1px solid var(--text-color);
+      border-radius: 18px;
+      color: var(--bg-color);
+      background-color: var(--text-color);
+      font-size: 25px;
+      font-weight: 700;
+      font-family: 'UT-Sans-TFF', sans-serif;
+    }
+  
+  
+    .signup-btn:hover {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+  
+    .login-btn {
+      position: absolute;
+      height: 81px;
+      width: 356.19px;
+      top: 673.37px;
+      left: 206px;
+      cursor: pointer;
+      border: 1px solid var(--text-color);
+      border-radius: 18px;
+      color: var(--bg-color);
+      background-color: var(--text-color);
+      font-size: 25px;
+      font-weight: 700;
+      font-family: 'UT-Sans-TFF', sans-serif;
+    }
+  
+  
+    .login-btn:hover {
+      background-color: var(--bg-color);
+      color: var(--button-color);
+    }
+  
+    .darkmode-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 800.37px;
+      border: 0px;
+      border-radius: 50px;
+      right: 360px;
+      background-color: rgba(28, 28, 28, 0%);
+      cursor: pointer;
+    }
+  
+    .darkmode {
+      width: 58px;
+      height: 55.83px;
+    }
+  
+    .lightmode-container {
+      display: hidden;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 800.37px;
+      border: 0px;
+      border-radius: 50px;
+      right: 360px;
+      background-color: rgba(28, 28, 28, 0%);
+      cursor: pointer;
+    }
+  
+    .lightmode {
+      width: 58px;
+      height: 55.83px;
+    }
+  
+    .IPad-Site-name {
+      position: absolute;
+      display: flex;
+      top: 300px;
+      left: 250px;
+      font-size: 43px;
+      font-family: 'UT-Sans-TFF', sans-serif;
+      align-items: center;
+      font-weight: bold;
+      color: var(--text-color);
+  
+    }
+  
+    .IPad-Motto {
+      position: absolute;
+      display: flex;
+      top: 365px;
+      left: 248.5px;
+      font-size: 25px;
+      font-family: 'UT-Sans-TFF', sans-serif;
+      color: var(--text-color);
+      align-items: center;
+    }
+  
+    .IPad-Choice {
+      position: absolute;
+      display: flex;
+      top: 469px;
+      left: 147px;
+      font-size: 32px;
+      font-family: 'UT-Sans-TFF', sans-serif;
+      color: var(--text-color);
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    body {
+      overflow: hidden;
+      background-color: var(--bg-color);
+      background-repeat: repeat;
+      background-size: 100vw 100vh;
+    }
+  
+    .logo-container {
+      position: relative;
+      top: 61.59px;
+      left: 113.81px;
+    }
+  
+    .Agora_logo_light {
+      width: 75%;
+      height: 200px;
+      object-fit: contain;
+      fill: var(--text-color);
+    }
+  
+    .blurs-container {
+      position: fixed;
+      top: -47.46px;
+      left: -1060.73px;
+      overflow: hidden;
+    }
+  
+    .blurs {
+      width: 1811.73px;
+      height: 1677.36px;
+      object-fit: contain;
+      overflow: hidden;
+    }
+  
+    .writing-container {
+      display: none;
+      top: 229px;
+      left: 790px;
+    }
+  
+    .writing {
+      width: 742px;
+      height: 210px;
+      object-fit: contain;
+    }
+  
+  
+    .signup-btn {
+      position: absolute;
+      height: 44.34px;
+      width: 195px;
+      top: 562.03px;
+      left: 92px;
+      cursor: pointer;
+      border: 1px solid var(--text-color);
+      border-radius: 18px;
+      color: var(--bg-color);
+      background-color: var(--text-color);
+      font-size: 25px;
+      font-weight: 700;
+      font-family: 'UT-Sans-TFF', sans-serif;
+    }
+  
+  
+    .signup-btn:hover {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+  
+    .login-btn {
+      position: absolute;
+      height: 44.34px;
+      width: 195px;
+      top: 625.47px;
+      left: 92px;
+      cursor: pointer;
+      border: 1px solid var(--text-color);
+      border-radius: 18px;
+      color: var(--bg-color);
+      background-color: var(--text-color);
+      font-size: 25px;
+      font-weight: 700;
+      font-family: 'UT-Sans-TFF', sans-serif;
+    }
+  
+  
+    .login-btn:hover {
+      background-color: var(--bg-color);
+      color: var(--button-color);
+    }
+  
+    .darkmode-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 15.03px;
+      right: 10px;
+      border-radius: 10px;
+      border: 0px;
+      background-color: rgba(28, 28, 28, 0%);
+      scale: 0.9;
+    }
+  
+    .lightmode-container {
+      display: hidden;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 15.03px;
+      border: 0px;
+      border-radius: 10px;
+      right: 10px;
+      background-color: rgba(28, 28, 28, 0%);
+    }
+  
+    .IPad-Site-name {
+      position: absolute;
+      display: flex;
+      top: 250px;
+      left: 100px;
+      font-size: 30px;
+      font-family: 'UT-Sans-TFF', sans-serif;
+      align-items: center;
+      font-weight: bold;
+      color: var(--text-color);
+  
+    }
+  
+    .IPad-Motto {
+      position: absolute;
+      display: flex;
+      top: 290.1px;
+      left: 113.5px;
+      font-size: 15px;
+      font-family: 'UT-Sans-TFF', sans-serif;
+      color: var(--text-color);
+      align-items: center;
+    }
+  
+    .IPad-Choice {
+      position: absolute;
+      display: flex;
+      top: 517.5px;
+      left: 30px;
+      font-size: 20px;
+      font-family: 'UT-Sans-TFF', sans-serif;
+      color: var(--text-color);
+      align-items: center;
+    }
+  }

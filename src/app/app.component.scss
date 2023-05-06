@@ -1,0 +1,30 @@
+
+
+@font-face {
+    font-family: "UTSansBold";
+    src: url('/assets/UT-Sans-TTF/UTSans-Bold.ttf');
+    font-weight: normal;
+    font-size: normal;
+  }
+  @font-face {
+    font-family: "UTSansLight";
+    src: url('/assets/UT-Sans-TTF/UTSans-Light.ttf');
+    font-weight: normal;
+    font-size: normal;
+  }
+  @font-face {
+    font-family: "UTSansMedium";
+    src: url('/assets/UT-Sans-TTF/UTSans-Medium.ttf');
+    font-weight: normal;
+    font-size: normal;
+  }
+  @font-face {
+    font-family: "UTSansRegular";
+    src: url('/assets/UT-Sans-TTF/UTSans-Regular.ttf');
+    font-weight: normal;
+    font-size: normal;
+  }
+
+html, body {
+    font-family: "UTSansRegular", sans-serif;
+}

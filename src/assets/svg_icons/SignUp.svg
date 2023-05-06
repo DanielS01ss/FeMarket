@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="198" height="61" viewBox="0 0 198 61">
+  <g id="SignUp" transform="translate(-1396 -31)">
+    <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(1396 31)" stroke="#707070" stroke-width="1">
+      <path d="M18,0H180a18,18,0,0,1,18,18V45a16,16,0,0,1-16,16H18A18,18,0,0,1,0,43V18A18,18,0,0,1,18,0Z" stroke="none"/>
+      <path d="M18,.5H180A17.5,17.5,0,0,1,197.5,18V45A15.5,15.5,0,0,1,182,60.5H18A17.5,17.5,0,0,1,.5,43V18A17.5,17.5,0,0,1,18,.5Z" fill="none"/>
+    </g>
+    <text id="Sign_Up" data-name="Sign Up" transform="translate(1454 67)" fill="#fff" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Sign Up</tspan></text>
+  </g>
+</svg>

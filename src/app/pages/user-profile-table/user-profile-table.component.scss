@@ -1,0 +1,77 @@
+body {
+    padding:0 !important;
+}
+.side_menu {
+    border-right: 1px solid #707070;
+    box-shadow: 0 0 10px 2px #707070;
+    display: flex;
+    flex-direction: column;
+    //max-width: 10%;
+    width: auto;
+    padding: 15px;
+    white-space: nowrap;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    img {
+        max-width: 48px;
+    }
+    img#logo-side {
+        max-width: 70px;
+    }
+    button {
+        background: #fff;
+        border: none;
+        margin: 5px 0;
+        border-radius: 15px;
+        padding: 10px;
+    }
+    button:last-child {
+        position: absolute;
+        bottom:15px;
+    }
+    button.active {
+        border: 1px solid #707070;
+        box-shadow: inset 0 0 10px 2px #aaa;
+    }
+    span {
+        display: block;
+        font-family: "UTSansBold";
+        font-size: 18px;
+    }
+}
+
+.content-table {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 120px;
+    overflow-y: auto;
+    padding: 0 30px;
+    text-align: center;
+    #usr_img {
+        width: 150px;
+    }
+    table {
+        width: 90%;
+        border-collapse: collapse;
+        border: 1px solid #707070;
+        margin: 15px auto 0;
+        }
+    table th, table td {
+        border: 1px solid #707070;
+        padding: 5px;
+        font-size: 22px;
+    }
+    table th {
+        border-bottom: 2px solid #707070;
+        font-family: "UTSansBold";
+    }
+}
+.back_icon{
+    cursor: pointer;
+}
