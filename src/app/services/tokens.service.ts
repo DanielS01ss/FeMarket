@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import jwtDecode from 'jwt-decode';
 
@@ -12,7 +12,7 @@ export class TokensService {
   public storeTokens(token: string, refresh: string): void {
     try {
       jwtDecode(token);
-      localStorage.setItem('access_token', token);
+      localStorage.setItem('access_token', JSON.stringify(token));
     }
     catch (e) {
       console.error("Error decoding token");
@@ -20,7 +20,7 @@ export class TokensService {
 
     try {
       jwtDecode(refresh);
-      localStorage.setItem('refresh_token', refresh);
+      localStorage.setItem('refresh_token', JSON.stringify(refresh));
     }
     catch (e) {
       console.error("Error decoding token");
@@ -30,7 +30,10 @@ export class TokensService {
   public refreshToken(): void {
     const refresh_token = localStorage.getItem('refresh_token');
     if (refresh_token) {
-      this.http.post('/refresh_token', refresh_token).subscribe((response: any) => {
+      let headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': JSON.parse(localStorage.getItem('access_token')!)});
+      this.http.post('http://185.146.86.118:5000/refresh_token', refresh_token, {headers: headers}).subscribe((response: any) => {
         localStorage.setItem('access_token', response);
       });
     }
