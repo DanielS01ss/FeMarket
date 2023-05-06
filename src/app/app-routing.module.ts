@@ -8,7 +8,7 @@ import { UserProfileTableComponent } from './pages/user-profile-table/user-profi
 import { UploadComponent } from './pages/upload/upload.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { SomethingComponent } from './something/something.component'
+import { ViewPageComponent } from './pages/view-page/view-page.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'user-profile', component: UserProfileComponent},
   {path: 'user-profile-table', component: UserProfileTableComponent},
   {path: 'upload', component:UploadComponent},
-  {path: 'something', component: SomethingComponent },
+  {path: 'view', component:ViewPageComponent},
   {path:'**', component:NotFoundComponent}
 ];
 

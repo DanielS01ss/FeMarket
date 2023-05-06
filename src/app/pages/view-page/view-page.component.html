@@ -1,0 +1,39 @@
+<div class="loading-spinner" *ngIf="loading">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<div class="searchbar" *ngIf="!loading">
+    <form id="search"> 
+        <input type="search" id="query" name="q" placeholder="Search..." [(ngModel)] = "query">
+        <button id="searchb" (click)="search()"><svg id="Search" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+            <rect id="Rectangle_693" data-name="Rectangle 693" width="40" height="40" fill="none"/>
+            <path id="Path_208" data-name="Path 208" d="M39.9,36.387l-8.281-8.281a17.181,17.181,0,0,0,3.513-10.54A17.458,17.458,0,0,0,17.566,0,17.458,17.458,0,0,0,0,17.566,17.458,17.458,0,0,0,17.566,35.132a17.182,17.182,0,0,0,10.54-3.513L36.387,39.9ZM5.019,17.566A12.425,12.425,0,0,1,17.566,5.019,12.425,12.425,0,0,1,30.113,17.566,12.425,12.425,0,0,1,17.566,30.113,12.425,12.425,0,0,1,5.019,17.566Z" fill="#4b4b4b"/>
+          </svg>
+          </button>
+        
+      </form>
+      
+    </div>
+<div class="tb" *ngIf="!loading">
+<table id = 'tabel'>
+  <thead>
+    <tr>
+      <th *ngFor="let column of columns">{{ column }}</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of slicedData">
+      <td *ngFor="let i of row">{{i}}</td>
+      <td><button>View Dataset</button></td>
+    </tr>
+  </tbody>
+</table>
+<div class="mat-paginator-navigation">
+  <button (click)="goToPreviousPage()" [disabled]="currentPage === 0">Previous</button>
+  <button (click)="goToNextPage()" [disabled]="currentPage === size || (((rows.length / pageSize) - 1) < 0)">Next</button>
+  </div>
+</div>

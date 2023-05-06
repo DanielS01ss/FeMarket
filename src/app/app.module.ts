@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertModule } from '@coreui/angular';
-import { SomethingComponent } from './something/something.component';
+import { ViewPageComponent } from './pages/view-page/view-page.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { SomethingComponent } from './something/something.component';
     LeftNavbarComponent,
     LandingPageComponent,
     NotFoundComponent,
-    SomethingComponent
+    ViewPageComponent
   ],
   imports: [
     BrowserModule,
