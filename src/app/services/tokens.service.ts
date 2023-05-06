@@ -30,7 +30,9 @@ export class TokensService {
   public refreshToken(): void {
     const refresh_token = localStorage.getItem('refresh_token');
     if (refresh_token) {
-      this.http.get
+      this.http.post('/refresh_token', refresh_token).subscribe((response: any) => {
+        localStorage.setItem('access_token', response);
+      });
     }
   }
 }
