@@ -52,3 +52,7 @@ export class SignupComponent {
 // username
 // email
 // password
+
+
+/// /validate_email/@email - POST
+/// body { "code" : codul generat}

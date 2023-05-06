@@ -18,6 +18,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertModule } from '@coreui/angular';
 import { SignupComponent } from './pages/signup/signup.component';
+import { SuccessCardComponent } from './pages/success-card/success-card.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SignupComponent } from './pages/signup/signup.component';
     LeftNavbarComponent,
     LandingPageComponent,
     NotFoundComponent,
-    SignupComponent
+    SignupComponent,
+    SuccessCardComponent
   ],
   imports: [
     BrowserModule,

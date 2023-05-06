@@ -9,6 +9,7 @@ import { UploadComponent } from './pages/upload/upload.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { SuccessCardComponent } from './pages/success-card/success-card.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'user-profile', component: UserProfileComponent},
   {path: 'user-profile-table', component: UserProfileTableComponent},
   {path: 'upload', component:UploadComponent},
+  {path: 'success', component:SuccessCardComponent},
   {path:'**', component:NotFoundComponent}
 ];
 

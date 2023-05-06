@@ -1,0 +1,106 @@
+.sign_in_pannel {
+    max-width: 507px;
+    width: 100%;
+    min-height: calc(100vh - 132px);
+    height: auto;
+    box-shadow: 0 3px 20px rgba(24, 18, 43, 0.26);
+    border-radius: 44px;
+    border: 1px solid #fdfdfd;
+    background-color: #ffffff;
+    position:relative;
+    padding:50px;
+    box-sizing: border-box;
+    margin: auto;
+  }
+  
+
+  .sign_in_pannel h1,
+  .sign_in_pannel h3 {
+    text-align: center;
+  }
+  
+  .sign_in_pannel h1 {
+    font-size: 2.3rem;
+    margin-bottom: 5px;
+    margin-top: 0;
+  }
+  
+  .sign_in_pannel h3 {
+    font-size: 20px;
+    margin-top: 0;
+  }
+
+  .logo {
+    font-family: "UTSansBold";
+    position: fixed;
+    top: 50px;
+    right: 30px;
+    text-align: center;
+    width: 320px;
+    img {
+      max-width: 96px;
+      display: inline-block;
+      padding-right: 16px;
+      margin-bottom: -25px;
+    }
+  }
+
+  
+  .logo h5 {
+    white-space: nowrap;
+    color: #000000;
+    font-family: "UTSansMedium";
+    font-size: 45px;
+    font-style: normal;
+    letter-spacing: 2.1px;
+    text-align: right;
+    margin: 0 30px 5px;
+  }
+  
+  .logo h6 {
+    color: #000000;
+    font-family: "UTSansMedium";
+    font-size: 20px;
+    line-height: 0%;
+    margin: 0 auto;
+  }
+
+
+  @media screen and (max-width: 767px) {
+
+    .sign_in_pannel {
+        margin:0 auto;
+        background: transparent;
+      }
+      .logo > h5, .logo > h6 {
+        display: none;
+      }
+      .sign_in_pannel h1, .sign_in_pannel h3 {
+        margin-left:-30px;
+        margin-right:-30px;
+      }
+      .sign_in_pannel h1 {
+        font-size: 1.8rem;
+      }
+      
+      .sign_in_pannel h3 {
+        font-size: 1.1rem;
+      }
+
+      .logo {
+        position: relative;
+        margin: 0 auto 50px;
+        width: 100%;
+        top: 0;
+        right: 0;
+        img {
+          max-width: 160;
+          padding: 0;
+        }
+      }
+
+      .logo > h5, .logo > h6 {
+        display: none;
+      }
+
+ }
