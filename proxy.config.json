@@ -1,0 +1,10 @@
+{
+    "/": {
+      "target": "http://185.146.86.118:5000",
+      "secure": false,
+      "pathRewrite": {
+        "^/": ""
+      },
+      "changeOrigin": true
+    }
+}
