@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { TokensService } from 'src/app/services/tokens.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -11,14 +13,14 @@ export class SignInComponent {
 
 
   form!:FormGroup;
-  constructor(private router: Router,private formBuilder:FormBuilder){
+  constructor(private router: Router,private formBuilder:FormBuilder, private http: HttpClient, private tokens: TokensService) {
     this.createForm();
   }
 
 
   private createForm():void{
     this.form = this.formBuilder.group({
-      email:['',Validators.required],
+      username:['',Validators.required],
       password:['',Validators.required]
     })
   }
@@ -43,6 +45,14 @@ export class SignInComponent {
     el?.setAttribute('type','password');
     von!.style.display = 'none';
     voff!.style.display = 'block';
+  }
+
+  public signin(): void {
+    const data = this.form.getRawValue();
+    this.http.post('/signin', data).subscribe((response: any) => {
+      this.tokens.storeTokens(response['user_data']['accessToken'], response['user_data']['refreshToken'])
+    })
+    this.router.navigate(['view']);
   }
 
 }
