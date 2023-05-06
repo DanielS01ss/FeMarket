@@ -20,6 +20,7 @@ import { AlertModule } from '@coreui/angular';
 import { SignupComponent } from './pages/signup/signup.component';
 import { SuccessCardComponent } from './pages/success-card/success-card.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,8 +34,7 @@ import { SuccessCardComponent } from './pages/success-card/success-card.componen
     LeftNavbarComponent,
     LandingPageComponent,
     NotFoundComponent,
-    SignupComponent,
-    SuccessCardComponent
+    SomethingComponent
   ],
   imports: [
     BrowserModule,
