@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertModule } from '@coreui/angular';
+import { SignupComponent } from './pages/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AlertModule } from '@coreui/angular';
     UploadComponent,
     LeftNavbarComponent,
     LandingPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
