@@ -26,7 +26,10 @@ export class SignupComponent {
       password:this.form.get('password')?.value
     }
   
-    this.http.post('/signup',newUser).subscribe((data)=>{console.log(data);});
+    this.http.post('http://185.146.86.118:5000/signup',newUser).subscribe((data)=>{this.router.navigate(['success'])},(err)=>{
+      console.log(err);
+      alert('A fost o eroare la conectarea la server');
+    });
   }
   
   toggleVisibilityOn() {

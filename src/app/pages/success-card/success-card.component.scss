@@ -1,7 +1,8 @@
 .sign_in_pannel {
-    max-width: 507px;
+  
+    max-width: 807px;
     width: 100%;
-    min-height: calc(100vh - 132px);
+    min-height: calc(100vh - 532px);
     height: auto;
     box-shadow: 0 3px 20px rgba(24, 18, 43, 0.26);
     border-radius: 44px;
@@ -9,8 +10,22 @@
     background-color: #ffffff;
     position:relative;
     padding:50px;
+    left:220px;
     box-sizing: border-box;
     margin: auto;
+  }
+  
+  .check-mark{
+    margin-left:220px;
+  }
+
+  .success-card-container{
+    margin-top:20px;
+  }
+
+  .page-title-header{
+    position: relative;
+    margin-top: 40px;
   }
   
 

@@ -19,6 +19,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertModule } from '@coreui/angular';
 import { SignupComponent } from './pages/signup/signup.component';
 import { SuccessCardComponent } from './pages/success-card/success-card.component';
+import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
+import { GraphsComponent } from './pages/graphs/graphs.component';
+import { NgxChartsModule }from '@swimlane/ngx-charts';
+
 
 
 @NgModule({
@@ -34,7 +38,10 @@ import { SuccessCardComponent } from './pages/success-card/success-card.componen
     LeftNavbarComponent,
     LandingPageComponent,
     NotFoundComponent,
-    SomethingComponent
+    SignupComponent,
+    SuccessCardComponent,
+    ConfirmationComponent,
+    GraphsComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +50,8 @@ import { SuccessCardComponent } from './pages/success-card/success-card.componen
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    AlertModule
+    AlertModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
