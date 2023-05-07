@@ -15,6 +15,7 @@ import { SuccessCardComponent } from './pages/success-card/success-card.componen
 import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 import { GraphsComponent } from './pages/graphs/graphs.component';
 import { AuthGuard } from './guard/auth.guard';
+import { SnippetComponent } from './pages/snippet/snippet.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path: 'success', component:SuccessCardComponent,canActivate:[AuthGuard]},
   {path: 'confirmation',component:ConfirmationComponent},
   {path:'graphs',component:GraphsComponent,canActivate:[AuthGuard]},
+  {path:'snippet',component:SnippetComponent,canActivate:[AuthGuard]},
   {path:'**', component:NotFoundComponent}
 ];
 

@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TokensService } from 'src/app/services/tokens.service';
 
 export interface MetaData {
@@ -23,7 +24,7 @@ export class ViewPageComponent implements OnInit {
   currentPage = 0;
   columns: string[] = ['Author', 'Dateset', 'Description', 'Size'];
   size = 0;
-  constructor(private http: HttpClient, private token: TokensService) {}
+  constructor(private router: Router, private http: HttpClient, private token: TokensService) {}
   ngOnInit(): void {
     const headers = new HttpHeaders({
       Authorization: 'Bearer ' + localStorage.getItem('access_token'),
@@ -109,6 +110,18 @@ export class ViewPageComponent implements OnInit {
   
   goToPreviousPage() {
     this.currentPage--;
+  }
+
+  reloadSnippet(row: any) {
+    const author = row[0];
+    const dataset_name = row[1];
+
+    this.router.navigate(['/snippet'], {
+      queryParams: {
+        dataset_name: dataset_name,
+        author: author
+      }
+    });
   }
   
 }
