@@ -8,6 +8,8 @@ import { UserProfileTableComponent } from './pages/user-profile-table/user-profi
 import { UploadComponent } from './pages/upload/upload.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ViewPageComponent } from './pages/view-page/view-page.component';
+import { PwChangesComponent } from './pages/pw-changes/pw-changes.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { SuccessCardComponent } from './pages/success-card/success-card.component';
 import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path: 'user-profile', component: UserProfileComponent},
   {path: 'user-profile-table', component: UserProfileTableComponent},
   {path: 'upload', component:UploadComponent},
+  {path: 'view', component:ViewPageComponent},
+  {path: 'pw-change', component: PwChangesComponent},
   {path: 'success', component:SuccessCardComponent},
   {path: 'confirmation',component:ConfirmationComponent},
   {path:'graphs',component:GraphsComponent},

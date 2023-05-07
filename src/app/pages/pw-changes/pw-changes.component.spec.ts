@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SomethingComponent } from './something.component';
+import { PwChangesComponent } from './pw-changes.component';
 
-describe('SomethingComponent', () => {
-  let component: SomethingComponent;
-  let fixture: ComponentFixture<SomethingComponent>;
+describe('PwChangesComponent', () => {
+  let component: PwChangesComponent;
+  let fixture: ComponentFixture<PwChangesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SomethingComponent ]
+      declarations: [ PwChangesComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SomethingComponent);
+    fixture = TestBed.createComponent(PwChangesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

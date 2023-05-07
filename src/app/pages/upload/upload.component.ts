@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Papa } from 'ngx-papaparse';
-import { HttpClient, HttpEventType } from '@angular/common/http';
-import { ButtonClickedService } from 'src/app/services/button-clicked.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { TokensService } from 'src/app/services/tokens.service';
 
 @Component({
   selector: 'app-upload',
@@ -16,14 +15,22 @@ export class UploadComponent {
   columns: string[] = [];
   title = 'market-place-fe';
   selectedFile: File | null = null;
+  table: HTMLTableElement | null = null;
+
+  constructor(private http: HttpClient, private token: TokensService) { }
+
   onFileSelected(event: Event): void {
     const target = event.target as HTMLInputElement;
     const files: FileList | null = target.files;
+
     if (files) {
       const allowedTypes = ['text/csv', 'text/xml', 'application/json'];
       const allowedSize = 2000000000;
       const file = files[0];
-      if (file.size>allowedSize){
+      const formData = new FormData();
+      formData.append('file', file, file.name);
+
+      if (file.size > allowedSize) {
         alert('File size is too large. Maximal size is 2GB');
         return;
       }
@@ -33,48 +40,44 @@ export class UploadComponent {
         alert('Supported data types: JSON, CSV, XML');
       }
       const reader: FileReader = new FileReader();
-  
+      const headers = new HttpHeaders({
+        'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
+        });
+
       reader.onload = (e: any) => {
         const fileType = file.type;
+        const formData = new FormData();
+        formData.append('file', file);
         if (fileType === 'text/csv') {
-
-          const csv: string = e.target.result;
-          console.log(csv);
-          this.parseCsv(csv);
+          this.token.checkToken();
+          this.http.post('http://185.146.86.118:5000/evaluate_data', formData, {headers: headers}).subscribe((response:any) => {
+            localStorage.setItem('file_tokens', response['tokens'])
+            this.columns = response['headers'];
+            this.rows = response['data'];
+          });
+          
         } else if (fileType === 'application/json') {
-          const json: string = e.target.result;
-          this.parseJson(json);
+          this.token.checkToken();
+          this.http.post('http://185.146.86.118:5000/evaluate_data', formData, {headers: headers}).subscribe((response:any) => {
+            localStorage.setItem('file_tokens', response['tokens'])
+            this.columns = response['headers'];
+            this.rows = response['data'];
+          });
+        }
+        else {
+          throw("Incompatible file type: " + fileType)
         }
       };
       reader.readAsText(file);
     }
   }
+
   onUpload(): void {
     if (this.selectedFile) {
-      const fd = new FormData();
-      fd.append('file', this.selectedFile, this.selectedFile.name);
-      console.log(this.selectedFile.name);
+      const formData = new FormData();
+      formData.append('file', this.selectedFile);
+
     }
   }
-
-  parseCsv(csv: string): void {
-    const papa: Papa = new Papa();
-    const parsedCsv = papa.parse(csv);
-    this.columns = parsedCsv.data[0];
-    this.rows = parsedCsv.data.slice(1);
-  }
-
-
-
-  parseJson(json: string): void {
-    const result = JSON.parse(json);
-    const keys = Object.keys(result?.data?.[0] || {});
-    this.columns = keys;
-    this.rows = (result.data || []).map((item: any) => Object.assign({}, item));
-  }  
-
-  constructor(private http: HttpClient, private btnClickedService:ButtonClickedService) {
-    this.btnClickedService.updateClicked(3);
-   }
   
 }

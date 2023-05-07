@@ -51,6 +51,7 @@ export class SignInComponent {
     const data = this.form.getRawValue();
     this.http.post('http://185.146.86.118:5000/signin', data).subscribe((response: any) => {
       this.tokens.storeTokens(response['user_data']['accessToken'], response['user_data']['refreshToken'])
+      localStorage.setItem('username', response['user_data']['username'].toUpperCase());
     })
     this.router.navigate(['view']);
   }

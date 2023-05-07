@@ -17,6 +17,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertModule } from '@coreui/angular';
+import { ViewPageComponent } from './pages/view-page/view-page.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { PwChangesComponent } from './pages/pw-changes/pw-changes.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { SuccessCardComponent } from './pages/success-card/success-card.component';
 import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
@@ -38,6 +41,8 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
     LeftNavbarComponent,
     LandingPageComponent,
     NotFoundComponent,
+    ViewPageComponent,
+    PwChangesComponent
     SignupComponent,
     SuccessCardComponent,
     ConfirmationComponent,
@@ -51,7 +56,8 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
     FormsModule,
     ReactiveFormsModule,
     AlertModule,
-    NgxChartsModule
+    NgxChartsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
