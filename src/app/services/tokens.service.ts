@@ -45,6 +45,32 @@ export class TokensService {
     }
   }
 
+  public tokenValidate():boolean{
+    const token: any = localStorage.getItem('access_token');
+    const refresh_token: any = localStorage.getItem('refresh_token');
+
+    if(!token || !refresh_token){
+      return false;
+    }
+
+    try {
+      jwtDecode(token);   
+        try {
+          jwtDecode(refresh_token);
+          return true;
+        }
+        catch (e) {
+          return false;
+        }
+          
+    }
+    catch (e) {
+      localStorage.removeItem('access_token');
+      localStorage.removeItem('refresh_token');
+      return false;
+    }
+  }
+
   public checkToken(): void {
     const token: any = localStorage.getItem('access_token');
     const refresh_token: any = localStorage.getItem('refresh_token');

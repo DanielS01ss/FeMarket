@@ -1,0 +1,43 @@
+<app-left-navbar></app-left-navbar>
+
+<div class="buttons-container">
+    <button class="toggle-section-btn" [ngClass]="{'current':btnClicked === 1}" (click)="toggleChange(1)">See most expensive data</button>
+    <button class="toggle-section-btn" [ngClass]="{'current':btnClicked === 2}" (click)="toggleChange(2)">See most transactioned data</button>
+</div>
+<div class="graph-container" *ngIf="btnClicked === 1">
+    <div>
+        <p class="section-title">The most expensive datasets</p>
+    </div>
+    <ngx-charts-bar-vertical 
+        [view]="[1000,400]"
+        [results]="saleData"
+        [xAxisLabel]="'Products'"
+        [legendTitle]="'Product Sale Chart'" 
+        [yAxisLabel]="'Sale'"
+        [legend]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+    [gradient]="true">
+    </ngx-charts-bar-vertical>
+</div>
+
+<div class="graph-container" *ngIf="btnClicked === 2">
+    <div>
+        <p class="section-title">The most transactioned datasets</p>
+    </div>
+    <ngx-charts-bar-vertical 
+        [view]="[1000,400]"
+        [results]="saleData"
+        [xAxisLabel]="'Products'"
+        [legendTitle]="'Product Sale Chart'" 
+        [yAxisLabel]="'Sale'"
+        [legend]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+    [gradient]="true">
+    </ngx-charts-bar-vertical>
+</div>
