@@ -18,6 +18,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertModule } from '@coreui/angular';
 import { ViewPageComponent } from './pages/view-page/view-page.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { PwChangesComponent } from './pages/pw-changes/pw-changes.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { ViewPageComponent } from './pages/view-page/view-page.component';
     LeftNavbarComponent,
     LandingPageComponent,
     NotFoundComponent,
-    ViewPageComponent
+    ViewPageComponent,
+    PwChangesComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { ViewPageComponent } from './pages/view-page/view-page.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    AlertModule
+    AlertModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

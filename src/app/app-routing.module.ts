@@ -9,6 +9,7 @@ import { UploadComponent } from './pages/upload/upload.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ViewPageComponent } from './pages/view-page/view-page.component';
+import { PwChangesComponent } from './pages/pw-changes/pw-changes.component';
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'user-profile-table', component: UserProfileTableComponent},
   {path: 'upload', component:UploadComponent},
   {path: 'view', component:ViewPageComponent},
+  {path: 'pw-change', component: PwChangesComponent},
   {path:'**', component:NotFoundComponent}
 ];
 

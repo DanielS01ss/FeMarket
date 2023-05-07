@@ -20,7 +20,8 @@
 
   .loading-spinner {
     display: inline-block;
-    position: relative;
+    position: absolute;
+    left: 90vw;
     width: 64px;
     height: 64px;
   }

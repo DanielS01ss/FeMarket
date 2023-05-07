@@ -1,0 +1,16 @@
+<form [formGroup]="passwordForm" (ngSubmit)="onSubmit()">
+    <label>
+        Old Password
+        <input type="password" formControlName="old" />
+      </label>
+    <label>
+      New Password
+      <input type="password" formControlName="password" />
+    </label>
+    <label>
+      Confirm Password
+    <input type="password" formControlName="confirm" />
+    </label>
+    <button type="submit" [disabled]="passwordForm.invalid">Submit</button>
+  </form>
+  

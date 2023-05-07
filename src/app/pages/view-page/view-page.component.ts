@@ -29,7 +29,9 @@ export class ViewPageComponent implements OnInit {
       Authorization: 'Bearer ' + localStorage.getItem('access_token'),
       'Content-Type': 'application/json',
     });
-    this.token.checkToken();
+    setTimeout(() => {
+      this.token.checkToken();
+    }, 2000);
     this.http.get('http://185.146.86.118:5000/get_all_meta', {
           headers: headers,
           observe: 'response'
