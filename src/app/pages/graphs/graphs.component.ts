@@ -11,6 +11,8 @@ export class GraphsComponent {
     this.btnClickedService.updateClicked(2);
   }
 
+   btnClicked:number = 1;
+
   saleData = [
     { name: "Mobiles", value: 105000 },
     { name: "Laptop", value: 55000 },
@@ -18,5 +20,10 @@ export class GraphsComponent {
     { name: "Headset", value: 150000 },
     { name: "Fridge", value: 20000 }
   ];
+ 
+  toggleChange(btnSelectedNr:number){
+    this.btnClicked = btnSelectedNr;
+  }
+
   
 }

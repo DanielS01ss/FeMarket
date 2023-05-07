@@ -42,7 +42,7 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
     LandingPageComponent,
     NotFoundComponent,
     ViewPageComponent,
-    PwChangesComponent
+    PwChangesComponent,
     SignupComponent,
     SuccessCardComponent,
     ConfirmationComponent,

@@ -14,11 +14,12 @@ export class ConfirmationComponent {
   }
   ngOnInit(){
     const param = this.route.snapshot.queryParamMap.get('code');
-    if(!param){
+    const email = this.route.snapshot.queryParamMap.get('email');
+    if(!param || !email){
       this.router.navigate(['not-found']);
     }
-    console.log(param);
-    const data = {'code':param,email:'thegamerdany01@gmail.com'};
+    
+    const data = {'code':param,email:email};
     this.http.post('http://185.146.86.118:5000/validate_email',data).subscribe((data)=>{
         console.log(data);
     },(err)=>{

@@ -41,4 +41,11 @@ export class LeftNavbarComponent {
               break;
         }
     }
+
+    logout(){
+      localStorage.removeItem('access_token');
+      localStorage.removeItem('refresh_token');
+      localStorage.removeItem('username');
+      this.router.navigate(['/sign-in']);
+    }
 }
