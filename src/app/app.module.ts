@@ -20,6 +20,13 @@ import { AlertModule } from '@coreui/angular';
 import { ViewPageComponent } from './pages/view-page/view-page.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PwChangesComponent } from './pages/pw-changes/pw-changes.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { SuccessCardComponent } from './pages/success-card/success-card.component';
+import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
+import { GraphsComponent } from './pages/graphs/graphs.component';
+import { NgxChartsModule }from '@swimlane/ngx-charts';
+
+
 
 @NgModule({
   declarations: [
@@ -35,7 +42,11 @@ import { PwChangesComponent } from './pages/pw-changes/pw-changes.component';
     LandingPageComponent,
     NotFoundComponent,
     ViewPageComponent,
-    PwChangesComponent
+    PwChangesComponent,
+    SignupComponent,
+    SuccessCardComponent,
+    ConfirmationComponent,
+    GraphsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +56,7 @@ import { PwChangesComponent } from './pages/pw-changes/pw-changes.component';
     FormsModule,
     ReactiveFormsModule,
     AlertModule,
+    NgxChartsModule,
     MatDialogModule
   ],
   providers: [],

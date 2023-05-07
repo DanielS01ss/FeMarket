@@ -52,8 +52,9 @@ export class SignInComponent {
     this.http.post('http://185.146.86.118:5000/signin', data).subscribe((response: any) => {
       this.tokens.storeTokens(response['user_data']['accessToken'], response['user_data']['refreshToken'])
       localStorage.setItem('username', response['user_data']['username'].toUpperCase());
+      this.router.navigate(['view']);
     })
-    this.router.navigate(['view']);
+    
   }
 
 }

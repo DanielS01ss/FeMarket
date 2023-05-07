@@ -29,4 +29,8 @@ export class LandingPageComponent {
   navigateToLogin(){
     this.router.navigate(['/sign-in']);
   }
+
+  navigateToSignup(){
+    this.router.navigate(['/sign-up']);
+  }
 }
