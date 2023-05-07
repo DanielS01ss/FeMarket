@@ -1,0 +1,30 @@
+<app-left-navbar></app-left-navbar>
+<h1>{{ datasetName }}</h1>
+<div class="loading-spinner" *ngIf="loading">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  
+
+<div class="tb" *ngIf="!loading">
+    <table id = 'tabel'>
+      <thead>
+        <tr>
+          <th *ngFor="let column of columns">{{ column }}</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of slicedData">
+          <td *ngFor="let i of row">{{i}}</td>
+          <td><button>View Dataset</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="mat-paginator-navigation">
+      <button (click)="goToPreviousPage()" [disabled]="currentPage === 0">Previous</button>
+      <button (click)="goToNextPage()" [disabled]="currentPage === size || (((rows.length / pageSize) - 1) < 0)">Next</button>
+      </div>
+    </div>
