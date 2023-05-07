@@ -1,649 +1,679 @@
 @media (min-width: 800px) and (max-width: 1920px) {
-    body {
-      overflow: hidden;
-      background-color: #ECE9E6;
-      background-repeat: repeat;
-      background-size: 100vw 100vh;
-    }
-  
-    .Blur_U-container {
-      position: fixed;
-      top: 113px;
-      right: -200px;
-      overflow: hidden;
-    }
-  
-    .Blur_U {
-      width: 1200px;
-      height: 1577.48px;
-      object-fit: contain;
-      overflow: hidden;
-    }
-  
-    .csv_icon-container {
-      display: flex;
-      position: fixed;
-      top: 260px;
-      left: 356px;
-  
-    }
-  
-    .csv_icon {
-      width: 91px;
-      height: 91px;
-    }
-  
-    .json_icon-container {
-      display: flex;
-      position: fixed;
-      top: 260px;
-      left: 464px;
-  
-    }
-  
-    .json_icon {
-      width: 91px;
-      height: 91px;
-    }
-  
-    .xml_icon-container {
-      display: flex;
-      position: fixed;
-      top: 260px;
-      left: 572px;
-  
-    }
-  
-    .xml_icon {
-      width: 95px;
-      height: 95px;
-    }
-  
-    .uplaod_data_btn {
-      position: absolute;
-      height: 86px;
-      width: 457px;
-      top: 0;
-      top: 60px;
-      left: 860px;
-      right: 0;
-      cursor: pointer;
-      border: 1.5px solid #000000;
-      border-radius: 50px;
-      color: #000000;
-      background-color: #D2CFCC;
-      font-size: 45px;
-      font-weight: 700;
-      font-family: 'UT-Sans-TFF', sans-serif;
-      padding-left: 60px;
-    }
-  
-    .uplaod_data_btn:hover {
-      background-color: #ffffff;
-      color: #000000;
-    }
-  
-    .browse_files_btn {
-      position: absolute;
-      height: 86px;
-      width: 457px;
-      top: 0;
-      top: 60px;
-      left: 310px;
-      right: 0;
-      cursor: pointer;
-      border: 1.5px solid #000000;
-      border-radius: 50px;
-      color: #000000;
-      background-color: #D2CFCC;
-      font-size: 45px;
-      font-weight: 700;
-      font-family: 'UT-Sans-TFF', sans-serif;
-      padding-left: 60px;
-    }
-  
-    .browse_files_btn:hover {
-      background-color: #ffffff;
-      color: #000000;
-    }
-  
-    .upload_icon-container {
-      display: flex;
-      position: fixed;
-      top: 63px;
-      left: 910px;
-      z-index: 50;
-      border-radius: 50px;
-    }
-  
-    .upload_icon {
-      width: 86px;
-      height: 86px;
-    }
-  
-    .browse_icon-container {
-      display: flex;
-      position: fixed;
-      top: 70px;
-      left: 350px;
-      z-index: 50;
-      border-radius: 50px;
-    }
-  
-    .browse_icon {
-      width: 70px;
-      height: 70px;
-      scale: 90%;
-    }
-  
-    .message1 {
-      position: absolute;
-      top: 180px;
-      left: 321px;
-      font-size: 40px;
-      font-family: Arial;
-      align-items: center;
-      font-weight: bold;
-      color: #000000;
-    }
-  
-    .message2 {
-      position: absolute;
-      top: 360px;
-      left: 321px;
-      font-size: 40px;
-      font-family: Arial;
-      align-items: center;
-      font-weight: bold;
-      color: #000000;
-    }
-  
-    .writing-container_U {
-      display: none;
-      position: absolute;
-      top: 285px;
-      left: 101px;
-    }
-  
-    .writing_U {
-      width: 156px;
-      height: 35px;
-      object-fit: contain;
-    }
-  
-    .rectangle1 {
-      position: fixed;
-      top: 434px;
-      left: 237px;
-      width: 664px;
-      height: 491px;
-      background-color: rgba(210, 207, 204, 0.500);
-      border: 1px solid #000;
-      padding: 10px;
-    }
-  
-    pre {
-      font-family: UT-Sans-TTF;
-    }
-  
-    .rectangle2 {
-      position: fixed;
-      top: 434px;
-      left: 969px;
-      width: 664px;
-      height: 491px;
-      background-color: rgba(210, 207, 204, 0.500);
-      border: 1px solid #000;
-      padding: 10px;
-    }
+  body {
+    overflow: hidden;
+    background-color: #ECE9E6;
+    background-repeat: repeat;
+    background-size: 100vw 100vh;
   }
-  
-  @media (max-width: 800px) {
-    body {
-      overflow: hidden;
-      background-color: #ECE9E6;
-      background-repeat: repeat;
-      background-size: 100vw 100vh;
-    }
-  
-    .Blur_U-container {
-      position: fixed;
-      top: 24px;
-      left: -210.13px;
-      overflow: hidden;
-    }
-  
-    .Blur_U {
-      width: 1200px;
-      height: 1577.48px;
-      object-fit: contain;
-      overflow: hidden;
-    }
-  
-    .csv_icon-container {
-      display: flex;
-      position: fixed;
-      top: 351px;
-      left: 249px;
-  
-    }
-  
-    .csv_icon {
-      width: 71px;
-      height: 71px;
-      scale: 1.1;
-    }
-  
-    .json_icon-container {
-      display: flex;
-      position: fixed;
-      top: 351px;
-      left: 349px;
-  
-    }
-  
-    .json_icon {
-      width: 71px;
-      height: 71px;
-      scale: 1.1;
-    }
-  
-    .xml_icon-container {
-      display: flex;
-      position: fixed;
-      top: 351px;
-      left: 449px;
-  
-    }
-  
-    .xml_icon {
-      width: 71px;
-      height: 71px;
-      scale: 1.1;
-    }
-  
-    .browse_files_btn {
-      position: absolute;
-      height: 99px;
-      width: 374px;
-      top: 0;
-      top: 50px;
-      left: 197px;
-      right: 0;
-      cursor: pointer;
-      border: 1.5px solid #000000;
-      border-radius: 50px;
-      color: #000000;
-      background-color: #D2CFCC;
-      font-size: 35px;
-      font-weight: 700;
-      font-family: 'Arial';
-      padding-left: 60px;
-    }
-  
-    .browse_files_btn:hover {
-      background-color: #ffffff;
-      color: #000000;
-    }
-  
-    .uplaod_data_btn {
-      position: absolute;
-      height: 99px;
-      width: 374px;
-      top: 0;
-      top: 170px;
-      left: 197px;
-      right: 0;
-      cursor: pointer;
-      border: 1.5px solid #000000;
-      border-radius: 50px;
-      color: #000000;
-      background-color: #D2CFCC;
-      font-size: 35px;
-      font-weight: 700;
-      font-family: 'Arial';
-      padding-left: 60px;
-    }
-  
-    .uplaod_data_btn:hover {
-      background-color: #ffffff;
-      color: #000000;
-    }
-  
-    .upload_icon-container {
-      display: flex;
-      position: fixed;
-      top: 178px;
-      left: 230px;
-      z-index: 50;
-  
-    }
-  
-    .upload_icon {
-      width: 67px;
-      height: 67px;
-    }
-  
-    .message1 {
-      position: fixed;
-      top: 290px;
-      left: 25px;
-      font-size: 29px;
-      font-family: Arial;
-      align-items: center;
-      font-weight: bold;
-      color: #000000;
-    }
-  
-    .message2 {
-      position: absolute;
-      top: 553px;
-      left: 125px;
-      font-size: 29px;
-      font-family: Arial;
-      align-items: center;
-      font-weight: bold;
-      color: #000000;
-    }
-  
-    .writing-container_U {
-      display: none;
-      position: absolute;
-      top: 285px;
-      left: 101px;
-    }
-  
-    .writing_U {
-      width: 156px;
-      height: 35px;
-      object-fit: contain;
-    }
-  
-    .browse_icon-container {
-      display: flex;
-      position: fixed;
-      top: 67px;
-      left: 225px;
-      z-index: 50;
-      border-radius: 50px;
-    }
-  
-    .browse_icon {
-      width: 70px;
-      height: 70px;
-      scale: 90%;
-    }
-  
-    .message1 {
-      position: absolute;
-      top: 280px;
-      left: 120px;
-      font-size: 29px;
-      font-family: Arial;
-      align-items: center;
-      font-weight: bold;
-      color: #000000;
-    }
-  
-    .message2 {
-      position: absolute;
-      top: 460px;
-      left: 221px;
-      font-size: 40px;
-      font-family: Arial;
-      align-items: center;
-      font-weight: bold;
-      color: #000000;
-    }
-  
-    .writing-container_U {
-      display: none;
-      position: absolute;
-      top: 285px;
-      left: 101px;
-    }
-  
-    .writing_U {
-      width: 156px;
-      height: 35px;
-      object-fit: contain;
-    }
-  
-    .rectangle1 {
-      position: fixed;
-      top: 560px;
-      left: 67px;
-      width: 288px;
-      height: 305px;
-      background-color: rgba(210, 207, 204, 0.500);
-      border: 1px solid #000;
-      padding: 10px;
-    }
-  
-    pre {
-      font-family: UT-Sans-TTF;
-    }
-  
-    .rectangle2 {
-      position: fixed;
-      top: 560px;
-      left: 400px;
-      width: 288px;
-      height: 305px;
-      background-color: rgba(236, 233, 230, 0.500);
-      border: 1px solid #000;
-      padding: 10px;
-    }
+
+  .Blur_U-container {
+    position: fixed;
+    top: 113px;
+    right: -200px;
+    overflow: hidden;
   }
-  
-  @media (max-width: 400px) {
-    body {
-      overflow: hidden;
-      background-color: #ECE9E6;
-      background-repeat: repeat-y;
-      background-size: 100vw 100vh;
-    }
-  
-    .Blur_U-container {
-      position: fixed;
-      top: -32px;
-      left: -507.13px;
-      overflow: hidden;
-      z-index: 0;
-    }
-  
-    .Blur_U {
-      width: 1200px;
-      height: 1577.48px;
-      object-fit: contain;
-      overflow: hidden;
-    }
-  
-    .csv_icon-container {
-      display: flex;
-      position: absolute;
-      top: 256px;
-      left: 70px;
-      z-index: 1;
-  
-    }
-  
-    .csv_icon {
-      width: 75px;
-      height: 70px;
-      scale: 85%;
-    }
-  
-    .json_icon-container {
-      display: flex;
-      position: absolute;
-      top: 256px;
-      left: 230px;
-      z-index: 1;
-    }
-  
-    .json_icon {
-      width: 75px;
-      height: 70px;
-      scale: 85%;
-    }
-  
-    .xml_icon-container {
-      display: flex;
-      position: absolute;
-      top: 256px;
-      left: 150px;
-      z-index: 1;
-    }
-  
-    .xml_icon {
-      width: 75px;
-      height: 70px;
-      scale: 85%;
-    }
-  
-    .uplaod_data_btn {
-      position: absolute;
-      height: 69px;
-      width: 300px;
-      top: 0;
-      top: 127px;
-      left: 35px;
-      right: 0;
-      cursor: pointer;
-      border: 1.5px solid #000000;
-      border-radius: 50px;
-      color: #000000;
-      background-color: #D2CFCC;
-      font-size: 25px;
-      font-weight: 700;
-      font-family: 'Arial';
-      padding-left: 50px;
-    }
-  
-    .uplaod_data_btn:hover {
-      background-color: #ffffff;
-      color: #000000;
-    }
-  
-    .browse_files_btn {
-      position: absolute;
-      height: 69px;
-      width: 300px;
-      top: 0;
-      top: 47px;
-      left: 35px;
-      right: 0;
-      cursor: pointer;
-      border: 1.5px solid #000000;
-      border-radius: 50px;
-      color: #000000;
-      background-color: #D2CFCC;
-      font-size: 25px;
-      font-weight: 700;
-      font-family: 'Arial';
-      padding-left: 50px;
-    }
-  
-    .upload_icon-container {
-      display: flex;
-      position: absolute;
-      top: 122px;
-      left: 65px;
-      z-index: 50;
-      border-radius: 50px;
-      scale: 90%;
-    }
-  
-    .upload_icon {
-      width: 70px;
-      height: 70px;
-      scale: 90%;
-    }
-  
-    .browse_files_btn:hover {
-      background-color: #ffffff;
-      color: #000000;
-    }
-  
-    .message1 {
-      display: none;
-      position: absolute;
-      top: 323px;
-      left: 125px;
-      font-size: 29px;
-      font-family: Arial;
-      align-items: center;
-      font-weight: bold;
-      color: #000000;
-    }
-  
-    .message2 {
-      position: absolute;
-      top: 340px;
-      left: 100px;
-      font-size: 20px;
-      font-family: Arial;
-      align-items: center;
-      font-weight: bold;
-      color: #000000;
-    }
-  
-    .writing-container_U {
-      position: absolute;
-      display: flex;
-      top: 210px;
-      left: 100px;
-      z-index: 1;
-      scale: 110%;
-    }
-  
-    .writing_U {
-      width: 156px;
-      height: 35px;
-      object-fit: contain;
-      align-items: center;
-    }
-  
-    .browse_icon-container {
-      display: flex;
-      position: absolute;
-      top: 48px;
-      left: 65px;
-      z-index: 50;
-      border-radius: 50px;
-      scale: 90%;
-    }
-  
-    .browse_icon {
-      width: 70px;
-      height: 70px;
-      scale: 90%;
-    }
-  
-    .rectangle1 {
-      position: absolute;
-      top: 370px;
-      left: 40px;
-      width: 288px;
-      height: 225px;
-      background-color: rgba(210, 207, 204, 0.500);
-      border: 1px solid #000;
-      padding: 10px;
-    }
-  
-    pre {
-      font-family: UT-Sans-TTF;
-    }
-  
-    .rectangle2 {
-      position: absolute;
-      top: 620px;
-      left: 40px;
-      width: 288px;
-      height: 225px;
-      background-color: rgba(210, 207, 204, 0.500);
-      border: 1px solid #000;
-      padding: 10px;
-    }
+
+  .Blur_U {
+    width: 1200px;
+    height: 1577.48px;
+    object-fit: contain;
+    overflow: hidden;
   }
+
+  .csv_icon-container {
+    display: flex;
+    position: fixed;
+    top: 260px;
+    left: 356px;
+
+  }
+
+  .csv_icon {
+    width: 91px;
+    height: 91px;
+  }
+
+  .json_icon-container {
+    display: flex;
+    position: fixed;
+    top: 260px;
+    left: 464px;
+
+  }
+
+  .json_icon {
+    width: 91px;
+    height: 91px;
+  }
+
+  .xml_icon-container {
+    display: flex;
+    position: fixed;
+    top: 260px;
+    left: 572px;
+
+  }
+
+  .xml_icon {
+    width: 95px;
+    height: 95px;
+  }
+
+  .uplaod_data_btn {
+    position: absolute;
+    height: 86px;
+    width: 457px;
+    top: 0;
+    top: 60px;
+    left: 860px;
+    right: 0;
+    cursor: pointer;
+    border: 1.5px solid #000000;
+    border-radius: 50px;
+    color: #000000;
+    background-color: #D2CFCC;
+    font-size: 45px;
+    font-weight: 700;
+    font-family: 'UT-Sans-TFF', sans-serif;
+    padding-left: 60px;
+  }
+
+  .uplaod_data_btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .browse_files_btn {
+    position: absolute;
+    height: 86px;
+    width: 457px;
+    top: 0;
+    top: 60px;
+    left: 310px;
+    right: 0;
+    cursor: pointer;
+    border: 1.5px solid #000000;
+    border-radius: 50px;
+    color: #000000;
+    background-color: #D2CFCC;
+    font-size: 45px;
+    font-weight: 700;
+    font-family: 'UT-Sans-TFF', sans-serif;
+    padding-left: 60px;
+  }
+
+  .browse_files_btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .upload_icon-container {
+    display: flex;
+    position: fixed;
+    top: 63px;
+    left: 910px;
+    z-index: 50;
+    border-radius: 50px;
+  }
+
+  .upload_icon {
+    width: 86px;
+    height: 86px;
+  }
+
+  .browse_icon-container {
+    display: flex;
+    position: fixed;
+    top: 70px;
+    left: 350px;
+    z-index: 50;
+    border-radius: 50px;
+  }
+
+  .browse_icon {
+    width: 70px;
+    height: 70px;
+    scale: 90%;
+  }
+
+  .message1 {
+    position: absolute;
+    top: 180px;
+    left: 321px;
+    font-size: 40px;
+    font-family: Arial;
+    align-items: center;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .message2 {
+    position: absolute;
+    top: 360px;
+    left: 321px;
+    font-size: 40px;
+    font-family: Arial;
+    align-items: center;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .writing-container_U {
+    display: none;
+    position: absolute;
+    top: 285px;
+    left: 101px;
+  }
+
+  .writing_U {
+    width: 156px;
+    height: 35px;
+    object-fit: contain;
+  }
+
+  .rectangle1 {
+    position: fixed;
+    top: 434px;
+    left: 237px;
+    width: 664px;
+    height: 491px;
+    background-color: rgba(210, 207, 204, 0.500);
+    border: 1px solid #000;
+    padding: 10px;
+    overflow-x: auto;
+  }  
+  
+  table{
+    max-width: 664px;
+    max-height: 491px;
+    overflow-x: auto;
+    border-collapse: collapse;
+  }
+  table td{
+    height: 10px;
+    width: 15px;
+    padding: 20px;
+    border: 1px solid #000;
+    text-align: center;
+  }
+
+  table th{
+    height: 10px;
+    width: 15px;
+    padding: 15px;
+    border: 1px solid #000;
+    text-align: center;  
+  }
+
+  .rectangle2 {
+    position: fixed;
+    top: 434px;
+    left: 969px;
+    width: 664px;
+    height: 491px;
+    background-color: rgba(210, 207, 204, 0.500);
+    border: 1px solid #000;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    overflow: hidden;
+    background-color: #ECE9E6;
+    background-repeat: repeat;
+    background-size: 100vw 100vh;
+  }
+
+  .Blur_U-container {
+    position: fixed;
+    top: 24px;
+    left: -210.13px;
+    overflow: hidden;
+  }
+
+  .Blur_U {
+    width: 1200px;
+    height: 1577.48px;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  .csv_icon-container {
+    display: flex;
+    position: fixed;
+    top: 351px;
+    left: 249px;
+
+  }
+
+  .csv_icon {
+    width: 71px;
+    height: 71px;
+    scale: 1.1;
+  }
+
+  .json_icon-container {
+    display: flex;
+    position: fixed;
+    top: 351px;
+    left: 349px;
+
+  }
+
+  .json_icon {
+    width: 71px;
+    height: 71px;
+    scale: 1.1;
+  }
+
+  .xml_icon-container {
+    display: flex;
+    position: fixed;
+    top: 351px;
+    left: 449px;
+
+  }
+
+  .xml_icon {
+    width: 71px;
+    height: 71px;
+    scale: 1.1;
+  }
+
+  .browse_files_btn {
+    position: absolute;
+    height: 99px;
+    width: 374px;
+    top: 0;
+    top: 50px;
+    left: 197px;
+    right: 0;
+    cursor: pointer;
+    border: 1.5px solid #000000;
+    border-radius: 50px;
+    color: #000000;
+    background-color: #D2CFCC;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Arial';
+    padding-left: 60px;
+  }
+
+  .browse_files_btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .uplaod_data_btn {
+    position: absolute;
+    height: 99px;
+    width: 374px;
+    top: 0;
+    top: 170px;
+    left: 197px;
+    right: 0;
+    cursor: pointer;
+    border: 1.5px solid #000000;
+    border-radius: 50px;
+    color: #000000;
+    background-color: #D2CFCC;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Arial';
+    padding-left: 60px;
+  }
+
+  .uplaod_data_btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .upload_icon-container {
+    display: flex;
+    position: fixed;
+    top: 178px;
+    left: 230px;
+    z-index: 50;
+
+  }
+
+  .upload_icon {
+    width: 67px;
+    height: 67px;
+  }
+
+  .browse_icon-container {
+    display: flex;
+    position: fixed;
+    top: 67px;
+    left: 225px;
+    z-index: 50;
+    border-radius: 50px;
+  }
+
+  .browse_icon {
+    width: 70px;
+    height: 70px;
+    scale: 90%;
+  }
+
+  .message1 {
+    position: absolute;
+    top: 280px;
+    left: 120px;
+    font-size: 29px;
+    font-family: Arial;
+    align-items: center;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .message2 {
+    position: absolute;
+    top: 460px;
+    left: 221px;
+    font-size: 40px;
+    font-family: Arial;
+    align-items: center;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .writing-container_U {
+    display: none;
+    position: absolute;
+    top: 285px;
+    left: 101px;
+  }
+
+  .writing_U {
+    width: 156px;
+    height: 35px;
+    object-fit: contain;
+  }
+
+  .rectangle1 {
+    position: fixed;
+    top: 560px;
+    left: 67px;
+    width: 288px;
+    height: 305px;
+    background-color: rgba(210, 207, 204, 0.500);
+    border: 1px solid #000;
+    padding: 10px;
+    overflow: auto;
+  }
+
+  table{
+    max-width: 228px;
+    overflow-x: auto;
+    border-collapse: collapse;
+  }
+  table td{
+    height: 10px;
+    width: 15px;
+    padding: 10px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  table th{
+    padding: 10px;
+    font-size: 17px;
+    height: 10px;
+    width: 15px;
+    padding: 15px;
+    border: 1px solid #000;
+    text-align: center;  
+  }
+
+  pre {
+    font-family: UT-Sans-TTF;
+  }
+
+  .rectangle2 {
+    position: fixed;
+    top: 560px;
+    left: 400px;
+    width: 288px;
+    height: 305px;
+    background-color: rgba(236, 233, 230, 0.500);
+    border: 1px solid #000;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    overflow: hidden;
+    background-color: #ECE9E6;
+    background-repeat: repeat-y;
+    background-size: 100vw 100vh;
+  }
+
+  .Blur_U-container {
+    position: fixed;
+    top: -32px;
+    left: -507.13px;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .Blur_U {
+    width: 1200px;
+    height: 1577.48px;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  .csv_icon-container {
+    display: flex;
+    position: absolute;
+    top: 256px;
+    left: 70px;
+    z-index: 1;
+
+  }
+
+  .csv_icon {
+    width: 75px;
+    height: 70px;
+    scale: 85%;
+  }
+
+  .json_icon-container {
+    display: flex;
+    position: absolute;
+    top: 256px;
+    left: 230px;
+    z-index: 1;
+  }
+
+  .json_icon {
+    width: 75px;
+    height: 70px;
+    scale: 85%;
+  }
+
+  .xml_icon-container {
+    display: flex;
+    position: absolute;
+    top: 256px;
+    left: 150px;
+    z-index: 1;
+  }
+
+  .xml_icon {
+    width: 75px;
+    height: 70px;
+    scale: 85%;
+  }
+
+  .uplaod_data_btn {
+    position: absolute;
+    height: 69px;
+    width: 300px;
+    top: 0;
+    top: 127px;
+    left: 35px;
+    right: 0;
+    cursor: pointer;
+    border: 1.5px solid #000000;
+    border-radius: 50px;
+    color: #000000;
+    background-color: #D2CFCC;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Arial';
+    padding-left: 50px;
+  }
+
+  .uplaod_data_btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .browse_files_btn {
+    position: absolute;
+    height: 69px;
+    width: 300px;
+    top: 0;
+    top: 47px;
+    left: 35px;
+    right: 0;
+    cursor: pointer;
+    border: 1.5px solid #000000;
+    border-radius: 50px;
+    color: #000000;
+    background-color: #D2CFCC;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Arial';
+    padding-left: 50px;
+  }
+
+  .upload_icon-container {
+    display: flex;
+    position: absolute;
+    top: 122px;
+    left: 65px;
+    z-index: 50;
+    border-radius: 50px;
+    scale: 90%;
+  }
+
+  .upload_icon {
+    width: 70px;
+    height: 70px;
+    scale: 90%;
+  }
+
+  .browse_files_btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .message1 {
+    display: none;
+    position: absolute;
+    top: 323px;
+    left: 125px;
+    font-size: 29px;
+    font-family: Arial;
+    align-items: center;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .message2 {
+    position: absolute;
+    top: 340px;
+    left: 100px;
+    font-size: 20px;
+    font-family: Arial;
+    align-items: center;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .writing-container_U {
+    position: absolute;
+    display: flex;
+    top: 210px;
+    left: 100px;
+    z-index: 1;
+    scale: 110%;
+  }
+
+  .writing_U {
+    width: 156px;
+    height: 35px;
+    object-fit: contain;
+    align-items: center;
+  }
+
+  .browse_icon-container {
+    display: flex;
+    position: absolute;
+    top: 48px;
+    left: 65px;
+    z-index: 50;
+    border-radius: 50px;
+    scale: 90%;
+  }
+
+  .browse_icon {
+    width: 70px;
+    height: 70px;
+    scale: 90%;
+  }
+
+  .rectangle1 {
+    position: absolute;
+    top: 370px;
+    left: 40px;
+    width: 288px;
+    height: 225px;
+    background-color: rgba(210, 207, 204, 0.500);
+    border: 1px solid #000;
+    padding: 10px;
+    overflow: auto;
+  }
+
+  table{
+    max-width: 228px;
+    overflow-x: auto;
+    border-collapse: collapse;
+  }
+  table td{
+    height: 10px;
+    width: 15px;
+    padding: 10px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  table th{
+    padding: 10px;
+    font-size: 12px;
+    height: 10px;
+    width: 15px;
+    padding: 15px;
+    border: 1px solid #000;
+    text-align: center;  
+  }
+
+  .rectangle2 {
+    position: absolute;
+    top: 620px;
+    left: 40px;
+    width: 288px;
+    height: 225px;
+    background-color: rgba(210, 207, 204, 0.500);
+    border: 1px solid #000;
+    padding: 10px;
+  }
+}
