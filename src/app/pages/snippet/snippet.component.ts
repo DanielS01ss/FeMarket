@@ -29,7 +29,7 @@ export class SnippetComponent implements OnInit {
       'Content-Type': 'application/json'
     });
     this.tokens.checkToken();
-    this.http.get(`http://185.146.86.118:5000/display_snippet?database_name=${author}&database_table=${dataset_name}`, {headers: headers}).subscribe((response: any) => {
+    this.http.get(`http://185.146.86.118:5000/display_snippet?database_name=${author}&database_table=${dataset_name.replace('-db-index', '')}`, {headers: headers}).subscribe((response: any) => {
       const data = response['@list'];
       this.columns = Object.keys(data[0]).map(key => key[0].toUpperCase() + key.slice(1).toLowerCase());
       const int_data = [];

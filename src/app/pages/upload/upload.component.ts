@@ -89,7 +89,7 @@ export class UploadComponent {
         "mapping": this.columns.map((column) => column.trim()),
         "tokens": this.tokens,
       }
-      this.http.post('http://localhost:8000/upload_data', upload_data, {headers: headers}).subscribe((response: any) => {
+      this.http.post('http://185.146.86.118:5000/upload_data', upload_data, {headers: headers}).subscribe((response: any) => {
         //alert('Data was uploaded successfully!');
         this.router.navigate(['/view']);
     }, err => {
