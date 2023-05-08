@@ -17,6 +17,7 @@ export class SnippetComponent implements OnInit {
   loading: boolean = true;
   pageSize: number = 3;
   size!:number;
+  buy: boolean = false;
   ngOnInit(): void {
     const dataset_name: any = this.route.snapshot.queryParamMap.get("dataset_name");
     this.datasetName = dataset_name.toUpperCase();
@@ -38,6 +39,18 @@ export class SnippetComponent implements OnInit {
       }
       this.rows = int_data;
       this.size =  Math.ceil((this.rows.length / this.pageSize) - 1);
+      this.http.get('http://185.146.86.118:5000/get_history', {headers: headers, observe:'response'}).subscribe((response: any) => {
+        for (let i of response.body)
+        {
+          if (i.datasetName == author?.toLowerCase())
+          {
+            this.buy = true;
+            break;
+          }
+        }
+      },err => {
+        console.log(err);
+      })
       this.loading = false;
     }, err => {
       alert("Server is down!");
@@ -57,5 +70,49 @@ export class SnippetComponent implements OnInit {
   
   goToPreviousPage() {
     this.currentPage--;
+  }
+
+  buy_dataset(): void {
+    let balance = 0;
+    let tokens = 0;
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
+      'Content-Type': 'application/json'
+    });
+    this.http.get('http://185.146.86.118:5000/get_balance', {headers: headers, observe: 'response'}).subscribe((response: any) => {
+      balance = parseFloat(response.body['message'].split(':')[1].replace(' ', ''));
+    },err => {
+      console.log(err);
+    })
+
+    this.http.get(`http://185.146.86.118:5000/get_tokens?dataset_name=${this.datasetName.toLowerCase()}`, {headers: headers, observe: 'response'}).subscribe((response: any) => {
+      tokens = response.body['tokens'];
+    },err => {
+      console.log(err);
+    })
+
+    if (balance < tokens)
+    {
+      const data = {
+        'database_name': this.route.snapshot.queryParamMap.get("author"),
+        'price': tokens
+      }
+      this.http.post(`http://185.146.86.118:5000/save_transaction`, data, {headers: headers, observe: 'response'}).subscribe((response: any) => {
+        alert("Transaction was successfull");
+        const balance_data = {
+          "balance": -tokens
+        }
+        this.http.post(`http://185.146.86.118:5000/update_balance`, balance_data, {headers: headers, observe: 'response'}).subscribe((response: any) => {
+
+        },err => {
+          console.log(err);
+        })
+      },err => {
+        console.log(err);
+      })
+    }
+    else {
+      alert("Balanta insuficienta!");
+    }
   }
 }

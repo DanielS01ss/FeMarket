@@ -4,55 +4,28 @@ h1 {
   transform: translate(-50%, 0%);
 }
 
-:root {
-  --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
-  --gray: #34495e;
-  --darkgray: #2c3e50;
-}
-
-select {
-  /* Reset Select */
-  appearance: none;
-  outline: 0;
-  border: 1px solid black;
-  box-shadow: none;
-  /* Personalize */
-  flex: 1;
-  padding: 0 1em;
-  color: black;
-  background-color: var(--bg-color);
-  background-image: none;
-  cursor: pointer;
-}
-/* Remove IE arrow */
-select::-ms-expand {
-  display: none;
-}
-/* Custom Select wrapper */
 .select {
   position: absolute;
   display: flex;
-  width: 20em;
+  width: auto;
   height: 3em;
   border-radius: .25em;
-  overflow: hidden;
-  left: 80vw;
+  border: 2px solid black;
   top: 100px;
+  align-items: center;
+  justify-content: center;
 }
-/* Arrow */
-.select::after {
-  content: '\25BC';
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1em;
-  background-color: #34495e;
-  transition: .25s all ease;
-  pointer-events: none;
+
+.check {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
 }
-/* Transition */
-.select:hover::after {
-  color: #f39c12;
+
+.check p {
+  margin-top: 15px;
 }
 
   table {
@@ -121,6 +94,35 @@ select::-ms-expand {
   }
   
   .mat-paginator-navigation button[disabled] {
+    background-color: #eee;
+    border: none;
+    color: #999;
+    cursor: not-allowed;
+  }
+
+  .btns {
+    position: absolute;
+    top: 100px;
+    left: 80vw;
+    width: 300px;
+  }
+  .btns button {
+    margin: 0 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btns button:hover {
+    background-color: #eee;
+  }
+  
+  .btns button[disabled] {
     background-color: #eee;
     border: none;
     color: #999;

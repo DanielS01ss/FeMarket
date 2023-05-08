@@ -32,6 +32,7 @@ export class UserProfileComponent implements OnInit {
 
     this.token.checkToken();
     this.http.get('http://185.146.86.118:5000/get_history', {headers: headers, observe: 'response'}).subscribe((response: any) => {
+      console.log(response.body);
       for (let i of response.body) {
         const data = {
           "sender": i.sender,

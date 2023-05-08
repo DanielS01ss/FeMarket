@@ -6,11 +6,10 @@
     <div></div>
     <div></div>
   </div>
-  
-<div class="select" *ngIf="!loading">
-  <select>
-    <option *ngFor="let column of columns">{{ column }}</option>
-  </select>
+
+<div class="btns">
+  <button class="buy" [disabled]="buy" *ngIf="!loading" (click)="buy_dataset()">Buy</button>
+  <button class="download" *ngIf="buy && !loading">Download Dataset</button>
 </div>
 
 <div class="tb" *ngIf="!loading">
