@@ -15,6 +15,7 @@ export class UserProfileComponent implements OnInit {
   rows: any[] = [];
   data: any[] = [];
   username!: string;
+  loading: boolean = true;
   email!: string;
   constructor(private router: Router, private http: HttpClient, private token: TokensService){
   }
@@ -58,6 +59,7 @@ export class UserProfileComponent implements OnInit {
     for (let i of this.data) {
       this.rows.push([i.sender, i.price, i.date]);
     }
+    this.loading = false;
   }
 
   public updatePassword(): void {

@@ -1,18 +1,80 @@
 h1 {
   position: absolute;
   left: 50%;
+  transform: translate(-50%, 0%);
 }
 
-table{
-    width: 400px !important;
-    overflow-x: auto;
+:root {
+  --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
+  --gray: #34495e;
+  --darkgray: #2c3e50;
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 1px solid black;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: black;
+  background-color: var(--bg-color);
+  background-image: none;
+  cursor: pointer;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: absolute;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+  left: 80vw;
+  top: 100px;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+  table {
+    max-width: 80vw;
+    max-height: 1000px;
+    overflow-x: scroll;
     border-collapse: collapse;
+    display: block;
+  }
+
+  table tr {
+    border-collapse: collapse;
+    max-height: 1% !important;
+    overflow: hidden;
   }
 
   table td{
-    height: 10px;
+    max-height: 10px !important;
+    border-collapse:collapse;
+    overflow: hidden;
     width: 15px;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #000;
     text-align: center;
     font-size: 17px;
@@ -21,7 +83,7 @@ table{
   table th{
     padding: 10px;
     font-size: 17px;
-    height: 10px;
+    max-height: 10px;
     width: 15px;
     padding: 15px;
     border: 1px solid #000;
@@ -37,7 +99,6 @@ table{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 500px;
   }
 
   .mat-paginator-navigation {

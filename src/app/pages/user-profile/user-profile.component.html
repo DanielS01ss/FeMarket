@@ -1,6 +1,11 @@
 <app-left-navbar></app-left-navbar>
-
-<div class="content-profile">
+<div class="loading-spinner" *ngIf="loading">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+<div class="content-profile" *ngIf="!loading">
     <img id="usr_img" src="assets/icons/username.svg">
     <h2>User:</h2>
     <span>{{username}}</span>
