@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ButtonClickedService } from 'src/app/services/button-clicked.service';
@@ -10,9 +11,19 @@ import { ButtonClickedService } from 'src/app/services/button-clicked.service';
 export class LeftNavbarComponent {
 
     activated_button:number = 0;
+    balance!: number;
 
-    constructor(private router:Router,private btnClickedService: ButtonClickedService){
+    constructor(private router:Router,private btnClickedService: ButtonClickedService, private http: HttpClient) {
       this.activated_button = btnClickedService.getData();
+      const headers = new HttpHeaders({
+        'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
+        'Content-Type': 'application/json'
+      });
+      this.http.get('http://185.146.86.118:5000/get_balance', {headers:headers, observe:'response'}).subscribe((response: any) => {
+        this.balance = response.body['message'].split(':')[1].replace(' ', '');
+      }, err => {
+        console.error(err);
+      })
     }
 
     navigateTo(option:number){
