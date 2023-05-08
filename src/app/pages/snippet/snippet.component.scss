@@ -1,18 +1,61 @@
 h1 {
   position: absolute;
   left: 50%;
+  transform: translate(-50%, 0%);
 }
 
-table{
-    width: 400px !important;
-    overflow-x: auto;
+select {
+  appearance: none;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px;
+  width: 100%;
+  max-width: 200px;
+  box-sizing: border-box;
+}
+
+select:focus {
+  border-color: #4286f4;
+  outline: none;
+}
+
+select:hover {
+  border-color: #aaa;
+}
+
+select option {
+  font-size: 16px;
+  padding: 8px;
+  background-color: white;
+  color: #333;
+}
+
+select option:hover {
+  background-color: #eee;
+  color: #333;
+}
+  table {
+    max-width: 80vw;
+    max-height: 1000px;
+    overflow-x: scroll;
     border-collapse: collapse;
+    display: block;
+  }
+
+  table tr {
+    border-collapse: collapse;
+    max-height: 1% !important;
+    overflow: hidden;
   }
 
   table td{
-    height: 10px;
+    max-height: 10px !important;
+    border-collapse:collapse;
+    overflow: hidden;
     width: 15px;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #000;
     text-align: center;
     font-size: 17px;
@@ -21,7 +64,7 @@ table{
   table th{
     padding: 10px;
     font-size: 17px;
-    height: 10px;
+    max-height: 10px;
     width: 15px;
     padding: 15px;
     border: 1px solid #000;
@@ -37,7 +80,6 @@ table{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 500px;
   }
 
   .mat-paginator-navigation {
@@ -60,6 +102,35 @@ table{
   }
   
   .mat-paginator-navigation button[disabled] {
+    background-color: #eee;
+    border: none;
+    color: #999;
+    cursor: not-allowed;
+  }
+
+  .btns {
+    position: absolute;
+    top: 100px;
+    left: 77vw;
+    width: 400px;
+  }
+  .btns button {
+    margin: 0 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btns button:hover {
+    background-color: #eee;
+  }
+  
+  .btns button[disabled] {
     background-color: #eee;
     border: none;
     color: #999;
