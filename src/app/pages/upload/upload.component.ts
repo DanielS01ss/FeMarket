@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { TokensService } from 'src/app/services/tokens.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-upload',
@@ -13,11 +14,13 @@ export class UploadComponent {
   jsonData: any;
   rows: any[] = [];
   columns: string[] = [];
+  file_name!: string;
+  tokens!: any;
   title = 'market-place-fe';
   selectedFile: File | null = null;
   table: HTMLTableElement | null = null;
 
-  constructor(private http: HttpClient, private token: TokensService) { }
+  constructor(private router: Router, private http: HttpClient, private token: TokensService) { }
 
   onFileSelected(event: Event): void {
     const target = event.target as HTMLInputElement;
@@ -74,9 +77,24 @@ export class UploadComponent {
 
   onUpload(): void {
     if (this.selectedFile) {
-      const formData = new FormData();
-      formData.append('file', this.selectedFile);
-
+      const headers = new HttpHeaders({
+        'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
+        });
+      this.tokens = localStorage.getItem('file_tokens');
+      localStorage.removeItem('file_tokens');
+      this.file_name = this.selectedFile.name.split('.')[0].toLowerCase();
+      const upload_data = {
+        "dataset_name": this.file_name,
+        "dataset": this.rows,
+        "mapping": this.columns.map((column) => column.trim()),
+        "tokens": this.tokens,
+      }
+      this.http.post('http://185.146.86.118:5000/upload_data', upload_data, {headers: headers}).subscribe((response: any) => {
+        //alert('Data was uploaded successfully!');
+        this.router.navigate(['/view']);
+    }, err => {
+      alert("Data was not uploaded successfully!");
+    });
     }
   }
   

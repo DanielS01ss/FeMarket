@@ -29,7 +29,7 @@
   <tbody>
     <tr *ngFor="let row of slicedData">
       <td *ngFor="let i of row">{{i}}</td>
-      <td><button>View Dataset</button></td>
+      <td><button (click)="reloadSnippet(row)">View Dataset</button></td>
     </tr>
   </tbody>
 </table>

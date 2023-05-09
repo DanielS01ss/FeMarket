@@ -40,6 +40,7 @@ export class TokensService {
       this.http.post('http://185.146.86.118:5000/refresh_token', data, {headers: headers}).subscribe((response: any) => {
         localStorage.removeItem('access_token');
         localStorage.setItem('access_token', response);
+        window.location.reload();
       });
     }
   }

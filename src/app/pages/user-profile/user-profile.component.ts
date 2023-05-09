@@ -15,6 +15,7 @@ export class UserProfileComponent implements OnInit {
   rows: any[] = [];
   data: any[] = [];
   username!: string;
+  loading: boolean = true;
   email!: string;
   constructor(private router: Router, private http: HttpClient, private token: TokensService){
   }
@@ -31,6 +32,7 @@ export class UserProfileComponent implements OnInit {
 
     this.token.checkToken();
     this.http.get('http://185.146.86.118:5000/get_history', {headers: headers, observe: 'response'}).subscribe((response: any) => {
+      console.log(response.body);
       for (let i of response.body) {
         const data = {
           "sender": i.sender,
@@ -58,6 +60,7 @@ export class UserProfileComponent implements OnInit {
     for (let i of this.data) {
       this.rows.push([i.sender, i.price, i.date]);
     }
+    this.loading = false;
   }
 
   public updatePassword(): void {

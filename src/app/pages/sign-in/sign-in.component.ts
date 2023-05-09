@@ -54,7 +54,6 @@ export class SignInComponent {
       localStorage.setItem('username', response['user_data']['username'].toUpperCase());
       this.router.navigate(['view']);
     })
-    
   }
 
 }
