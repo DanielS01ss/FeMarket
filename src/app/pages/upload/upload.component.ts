@@ -27,7 +27,7 @@ export class UploadComponent {
     const files: FileList | null = target.files;
 
     if (files) {
-      const allowedTypes = ['text/csv', 'text/xml', 'application/json'];
+      const allowedTypes = ['text/csv','application/json'];
       const allowedSize = 2000000000;
       const file = files[0];
       const formData = new FormData();
@@ -40,7 +40,7 @@ export class UploadComponent {
       if (allowedTypes.includes(file.type)) {
         this.selectedFile = file;
       } else {
-        alert('Supported data types: JSON, CSV, XML');
+        alert('Supported data types: JSON, CSV');
       }
       const reader: FileReader = new FileReader();
       const headers = new HttpHeaders({
@@ -56,7 +56,7 @@ export class UploadComponent {
           this.http.post('http://185.146.86.118:5000/evaluate_data', formData, {headers: headers}).subscribe((response:any) => {
             localStorage.setItem('file_tokens', response['tokens'])
             this.columns = response['headers'];
-            this.rows = response['data'];
+            this.rows = response['data'].slice(0,10);
           });
           
         } else if (fileType === 'application/json') {
@@ -64,7 +64,7 @@ export class UploadComponent {
           this.http.post('http://185.146.86.118:5000/evaluate_data', formData, {headers: headers}).subscribe((response:any) => {
             localStorage.setItem('file_tokens', response['tokens'])
             this.columns = response['headers'];
-            this.rows = response['data'];
+            this.rows = response['data'].slice(0,10);
           });
         }
         else {
