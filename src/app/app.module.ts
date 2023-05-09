@@ -25,7 +25,7 @@ import { SuccessCardComponent } from './pages/success-card/success-card.componen
 import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 import { GraphsComponent } from './pages/graphs/graphs.component';
 import { NgxChartsModule }from '@swimlane/ngx-charts';
-
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -49,6 +49,7 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
     GraphsComponent
   ],
   imports: [
+    NgChartsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
