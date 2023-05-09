@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: 'upload', component:UploadComponent,canActivate:[AuthGuard]},
   {path: 'view', component:ViewPageComponent,canActivate:[AuthGuard]},
   {path: 'pw-change', component: PwChangesComponent,canActivate:[AuthGuard]},
-  {path: 'success', component:SuccessCardComponent,canActivate:[AuthGuard]},
+  {path: 'success', component:SuccessCardComponent},
   {path: 'confirmation',component:ConfirmationComponent},
   {path:'graphs',component:GraphsComponent,canActivate:[AuthGuard]},
   {path:'snippet',component:SnippetComponent,canActivate:[AuthGuard]},
