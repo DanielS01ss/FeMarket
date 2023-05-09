@@ -13,6 +13,7 @@ export class SignInComponent {
 
 
   form!:FormGroup;
+  login:boolean = false;
   constructor(private router: Router,private formBuilder:FormBuilder, private http: HttpClient, private tokens: TokensService) {
     this.createForm();
   }
@@ -53,7 +54,10 @@ export class SignInComponent {
       this.tokens.storeTokens(response['user_data']['accessToken'], response['user_data']['refreshToken'])
       localStorage.setItem('username', response['user_data']['username'].toUpperCase());
       this.router.navigate(['view']);
+    }, err =>{
+      alert('Email or password incorrect!');
     })
+
   }
 
 }
