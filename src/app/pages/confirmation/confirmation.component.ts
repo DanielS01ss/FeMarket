@@ -26,5 +26,7 @@ export class ConfirmationComponent {
     //   console.log(err);
     // });
     // console.log(param);
-  }
+      
+    }
+
 }
