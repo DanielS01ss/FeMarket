@@ -25,7 +25,7 @@ import { SuccessCardComponent } from './pages/success-card/success-card.componen
 import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 import { GraphsComponent } from './pages/graphs/graphs.component';
 import { NgxChartsModule }from '@swimlane/ngx-charts';
-import { SnippetComponent } from './pages/snippet/snippet.component';
+import { NgChartsModule } from 'ng2-charts';import { SnippetComponent } from './pages/snippet/snippet.component';
 
 
 
@@ -51,6 +51,7 @@ import { SnippetComponent } from './pages/snippet/snippet.component';
     SnippetComponent
   ],
   imports: [
+    NgChartsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
