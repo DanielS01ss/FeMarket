@@ -34,7 +34,6 @@ export class UserProfileComponent implements OnInit {
     this.http.get('http://185.146.86.118:5000/get_history', {headers: headers, observe: 'response'}).subscribe((response: any) => {
       for (let i of response.body) {
         const data = {
-          "sender": i.sender,
           "price": i.price,
           "date": i.transactionDate,
           "dataset_name": i.datasetName
@@ -58,7 +57,7 @@ export class UserProfileComponent implements OnInit {
 
   private createTable(): void {
     for (let i of this.data) {
-      this.rows.push([i.sender, i.dataset_name, i.price, i.date]);
+      this.rows.push([i.dataset_name, i.price, i.date]);
     }
     this.loading = false;
   }

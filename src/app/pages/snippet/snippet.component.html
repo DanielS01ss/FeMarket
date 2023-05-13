@@ -8,7 +8,8 @@
   </div>
 
 <div class="btns">
-  <button class="buy" [disabled]="buy" *ngIf="!loading" (click)="buy_dataset()">Buy</button>
+  <p *ngIf="!buy && !loading">Price: {{ tok }}</p>
+  <button class="buy" [disabled]="buy" *ngIf="!buy && !loading" (click)="buy_dataset()">Buy</button>
   <select [(ngModel)]="selectedValue" *ngIf="buy && !loading">
     <option value="json">JSON</option>
     <option value="json-ld">JSON-LD</option>

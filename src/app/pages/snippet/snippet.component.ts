@@ -20,10 +20,13 @@ export class SnippetComponent implements OnInit {
   columns: string[] = [];
   currentPage: number = 0;
   loading: boolean = true;
+  tok!: number;
   pageSize: number = 3;
   size!:number;
   buy: boolean = false;
   selectedValue!: string;
+  cost!: number;
+  balance!: number;
   ngOnInit(): void {
     const dataset_name: any = this.route.snapshot.queryParamMap.get("dataset_name");
     this.datasetName = dataset_name.toUpperCase();
@@ -48,7 +51,7 @@ export class SnippetComponent implements OnInit {
       this.http.get('http://185.146.86.118:5000/get_history', {headers: headers, observe:'response'}).subscribe((response: any) => {
         for (let i of response.body)
         {
-          if (i.datasetName == author?.toLowerCase())
+          if (i.datasetName == this.datasetName?.toLowerCase())
           {
             this.buy = true;
             break;
@@ -61,6 +64,22 @@ export class SnippetComponent implements OnInit {
     }, err => {
       alert("Server is down!");
     });
+    this.http.get(`http://185.146.86.118:5000/get_tokens?dataset_name=${this.datasetName.toLowerCase()}`, {headers: headers, observe: 'response'}).subscribe((response: any) => {
+      this.tok = response.body['tokens'];
+    },err => {
+      console.log(err);
+    })
+    this.http.get('http://185.146.86.118:5000/get_balance', {headers: headers, observe: 'response'}).subscribe((response: any) => {
+      this.balance = parseInt(response.body['message'].split(':')[1].replace(' ', ''));
+    },err => {
+      console.log(err);
+    })
+
+    this.http.get(`http://185.146.86.118:5000/get_tokens?dataset_name=${this.datasetName.toLowerCase()}`, {headers: headers, observe: 'response'}).subscribe((response: any) => {
+      this.cost = response.body['tokens'];
+    },err => {
+      console.log(err);
+    })
   }
   constructor(private route:ActivatedRoute, private router: Router, private tokens: TokensService, private http: HttpClient, private papa: Papa){}
 
@@ -83,35 +102,22 @@ export class SnippetComponent implements OnInit {
       'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
       'Content-Type': 'application/json'
     });
-    this.http.get('http://185.146.86.118:5000/get_balance', {headers: headers, observe: 'response'}).subscribe((response: any) => {
-      localStorage.setItem("balance", response.body['message'].split(':')[1].replace(' ', ''));
-    },err => {
-      console.log(err);
-    })
 
-    this.http.get(`http://185.146.86.118:5000/get_tokens?dataset_name=${this.datasetName.toLowerCase()}`, {headers: headers, observe: 'response'}).subscribe((response: any) => {
-      localStorage.setItem("cost", response.body['tokens']);
-    },err => {
-      console.log(err);
-    })
-    const balance = parseInt(localStorage.getItem("balance")!);
-    const price = parseInt(localStorage.getItem("cost")!);
-    if (price < balance)
+    if (this.cost < this.balance) 
     {
       if (confirm('Are you sure you want to buy this dataset?'))
       {
         const data = {
-          'database_name': this.route.snapshot.queryParamMap.get("author")?.toLowerCase(),
-          'price': price
+          'database_name': this.datasetName.toLowerCase(),
+          'price': this.cost
         }
         this.http.post(`http://185.146.86.118:5000/save_transaction`, data, {headers: headers, observe: 'response'}).subscribe((response: any) => {
           alert("Transaction was successfull");
           const balance_data = {
-            "balance": -price
+            "balance": -this.cost
           }
           this.http.post(`http://185.146.86.118:5000/update_balance`, balance_data, {headers: headers, observe: 'response'}).subscribe((response: any) => {
-            localStorage.removeItem("balance");
-            localStorage.removeItem("cost");
+            window.location.reload();
           },err => {
             console.log(err);
           })
@@ -124,7 +130,7 @@ export class SnippetComponent implements OnInit {
     else {
       alert("Balanta insuficienta!");
     }
-  }
+}
 
   downlaod_data() {
     const author = this.route.snapshot.queryParamMap.get("author");

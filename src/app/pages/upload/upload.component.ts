@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.scss']
+  styleUrls: ['./upload.component.scss'],
 })
 export class UploadComponent {
   csvData: any;
@@ -20,14 +20,18 @@ export class UploadComponent {
   selectedFile: File | null = null;
   table: HTMLTableElement | null = null;
 
-  constructor(private router: Router, private http: HttpClient, private token: TokensService) { }
+  constructor(
+    private router: Router,
+    private http: HttpClient,
+    private token: TokensService
+  ) {}
 
   onFileSelected(event: Event): void {
     const target = event.target as HTMLInputElement;
     const files: FileList | null = target.files;
 
     if (files) {
-      const allowedTypes = ['text/csv','application/json'];
+      const allowedTypes = ['text/csv', 'application/json'];
       const allowedSize = 2000000000;
       const file = files[0];
       const formData = new FormData();
@@ -44,8 +48,8 @@ export class UploadComponent {
       }
       const reader: FileReader = new FileReader();
       const headers = new HttpHeaders({
-        'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
-        });
+        Authorization: 'Bearer ' + localStorage.getItem('access_token'),
+      });
 
       reader.onload = (e: any) => {
         const fileType = file.type;
@@ -53,22 +57,28 @@ export class UploadComponent {
         formData.append('file', file);
         if (fileType === 'text/csv') {
           this.token.checkToken();
-          this.http.post('http://185.146.86.118:5000/evaluate_data', formData, {headers: headers}).subscribe((response:any) => {
-            localStorage.setItem('file_tokens', response['tokens'])
-            this.columns = response['headers'];
-            this.rows = response['data'].slice(0,10);
-          });
-          
+          this.http
+            .post('http://185.146.86.118:5000/evaluate_data', formData, {
+              headers: headers,
+            })
+            .subscribe((response: any) => {
+              localStorage.setItem('file_tokens', response['tokens']);
+              this.columns = response['headers'];
+              this.rows = response['data'].slice(0, 10);
+            });
         } else if (fileType === 'application/json') {
           this.token.checkToken();
-          this.http.post('http://185.146.86.118:5000/evaluate_data', formData, {headers: headers}).subscribe((response:any) => {
-            localStorage.setItem('file_tokens', response['tokens'])
-            this.columns = response['headers'];
-            this.rows = response['data'].slice(0,10);
-          });
-        }
-        else {
-          throw("Incompatible file type: " + fileType)
+          this.http
+            .post('http://185.146.86.118:5000/evaluate_data', formData, {
+              headers: headers,
+            })
+            .subscribe((response: any) => {
+              localStorage.setItem('file_tokens', response['tokens']);
+              this.columns = response['headers'];
+              this.rows = response['data'].slice(0, 10);
+            });
+        } else {
+          throw 'Incompatible file type: ' + fileType;
         }
       };
       reader.readAsText(file);
@@ -78,24 +88,45 @@ export class UploadComponent {
   onUpload(): void {
     if (this.selectedFile) {
       const headers = new HttpHeaders({
-        'Authorization': 'Bearer ' + localStorage.getItem('access_token'),
-        });
+        Authorization: 'Bearer ' + localStorage.getItem('access_token'),
+      });
       this.tokens = localStorage.getItem('file_tokens');
       localStorage.removeItem('file_tokens');
       this.file_name = this.selectedFile.name.split('.')[0].toLowerCase();
       const upload_data = {
-        "dataset_name": this.file_name,
-        "dataset": this.rows,
-        "mapping": this.columns.map((column) => column.trim()),
-        "tokens": this.tokens,
-      }
-      this.http.post('http://185.146.86.118:5000/upload_data', upload_data, {headers: headers}).subscribe((response: any) => {
-        //alert('Data was uploaded successfully!');
-        this.router.navigate(['/view']);
-    }, err => {
-      alert("Data was not uploaded successfully!");
-    });
+        dataset_name: this.file_name,
+        dataset: this.rows,
+        mapping: this.columns.map((column) => column.trim()),
+        tokens: this.tokens,
+      };
+      this.http
+        .post('http://185.146.86.118:5000/upload_data', upload_data, {
+          headers: headers,
+        })
+        .subscribe(
+          (response: any) => {
+            const balance_data = {
+              balance: this.tokens,
+            };
+            alert('Data was uploaded successfully!');
+            this.http
+              .post(`http://185.146.86.118:5000/update_balance`, balance_data, {
+                headers: headers,
+                observe: 'response',
+              })
+              .subscribe(
+                (response: any) => {
+                  this.router.navigate(['/view']);
+                },
+                (err) => {
+                  console.log(err);
+                }
+              );
+          },
+          (err) => {
+            alert('Data was not uploaded successfully!');
+          }
+        );
     }
   }
-  
 }
