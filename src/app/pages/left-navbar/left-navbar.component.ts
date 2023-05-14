@@ -47,6 +47,10 @@ export class LeftNavbarComponent {
             this.router.navigate(['/user-profile']);
             this.btnClickedService.updateClicked(4);
             break;
+          case 6:
+            this.router.navigate(['/machine-learning']);
+            this.btnClickedService.updateClicked(6);
+            break;
           default:
               this.router.navigate(['/view']);
               break;
