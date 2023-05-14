@@ -26,8 +26,10 @@ export class ConfirmationComponent {
     },(err)=>{
       console.log(err);
     });
-    console.log(param);
-      
+    
     }
 
+    navigateToLogin(){
+      this.router.navigate(['sign-in']);
+    }
 }
