@@ -24,10 +24,8 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { SuccessCardComponent } from './pages/success-card/success-card.component';
 import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 import { GraphsComponent } from './pages/graphs/graphs.component';
-import { NgxChartsModule }from '@swimlane/ngx-charts';
 import { NgChartsModule } from 'ng2-charts';import { SnippetComponent } from './pages/snippet/snippet.component';
-import { RecommendedsComponent } from './recommendeds/recommendeds.component';
-import { MachineLearningComponent } from './pages/machine-learning/machine-learning.component';
+import { SidenavComponent } from './pages/sidenav/sidenav.component';
 
 
 
@@ -51,8 +49,7 @@ import { MachineLearningComponent } from './pages/machine-learning/machine-learn
     ConfirmationComponent,
     GraphsComponent,
     SnippetComponent,
-    RecommendedsComponent,
-    MachineLearningComponent
+    SidenavComponent
   ],
   imports: [
     NgChartsModule,
@@ -63,7 +60,6 @@ import { MachineLearningComponent } from './pages/machine-learning/machine-learn
     FormsModule,
     ReactiveFormsModule,
     AlertModule,
-    NgxChartsModule,
     MatDialogModule
   ],
   providers: [],

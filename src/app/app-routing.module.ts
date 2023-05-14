@@ -16,7 +16,7 @@ import { ConfirmationComponent } from './pages/confirmation/confirmation.compone
 import { GraphsComponent } from './pages/graphs/graphs.component';
 import { AuthGuard } from './guard/auth.guard';
 import { SnippetComponent } from './pages/snippet/snippet.component';
-import { MachineLearningComponent } from './pages/machine-learning/machine-learning.component';
+
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
@@ -32,7 +32,6 @@ const routes: Routes = [
   {path: 'confirmation',component:ConfirmationComponent},
   {path:'graphs',component:GraphsComponent,canActivate:[AuthGuard]},
   {path:'snippet',component:SnippetComponent,canActivate:[AuthGuard]},
-  {path:'machine-learning',component:MachineLearningComponent,canActivate:[AuthGuard]},
   {path:'**', component:NotFoundComponent}
 ];
 
