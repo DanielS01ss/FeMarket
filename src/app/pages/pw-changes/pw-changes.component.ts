@@ -19,6 +19,22 @@ export class PwChangesComponent {
     });
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  //nu modifica ce e la onSubmit
   onSubmit() {
     const form_data = this.passwordForm.getRawValue();
     const headers = new HttpHeaders({

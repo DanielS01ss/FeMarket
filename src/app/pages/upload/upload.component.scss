@@ -44,11 +44,13 @@
     font-weight: 700;
     font-family: 'UT-Sans-TFF', sans-serif;
     padding-left: 60px;
+    font-family: UTSansBold;
   }
 
   .uplaod_data_btn:hover {
     background-color: #ffffff;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .browse_files_btn {
@@ -67,11 +69,13 @@
     font-weight: 700;
     font-family: 'UT-Sans-TFF', sans-serif;
     padding-left: 60px;
+    font-family: UTSansBold;
   }
 
   .browse_files_btn:hover {
     background-color: #ffffff;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .upload_icon-container {
@@ -114,6 +118,7 @@
     align-items: center;
     font-weight: bold;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .message2 {
@@ -125,6 +130,7 @@
     align-items: center;
     font-weight: bold;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .writing-container_U {
@@ -161,6 +167,7 @@
     max-height: 391px;
     overflow-y: scroll;
     border-collapse: collapse;
+    font-family: UTSansBold;
   }
   table td{
     height: 10px;
@@ -168,6 +175,7 @@
     padding: 20px;
     border: 1px solid #000;
     text-align: center;
+    font-family: UTSansBold;
   }
 
   table th{
@@ -176,6 +184,7 @@
     padding: 15px;
     border: 1px solid #000;
     text-align: center;  
+    font-family: UTSansBold;
   }
 
   .rectangle2 {
@@ -191,7 +200,7 @@
   }
 
   p{
-    font-family: Arial, sans-serif;
+    font-family: UTSansBold;;
     font-size: 25px;
     font-weight: bold;
     color: #000000;
@@ -221,7 +230,6 @@
     position: fixed;
     top: 321px;
     left: 439px;
-
   }
 
   .json_icon {
@@ -247,11 +255,13 @@
     font-weight: 700;
     font-family: 'Arial';
     padding-left: 60px;
+    font-family: UTSansBold;
   }
 
   .browse_files_btn:hover {
     background-color: #ffffff;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .uplaod_data_btn {
@@ -271,11 +281,13 @@
     font-weight: 700;
     font-family: 'Arial';
     padding-left: 60px;
+    font-family: UTSansBold;
   }
 
   .uplaod_data_btn:hover {
     background-color: #ffffff;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .upload_icon-container {
@@ -317,6 +329,7 @@
     align-items: center;
     font-weight: bold;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .message2 {
@@ -328,6 +341,7 @@
     align-items: center;
     font-weight: bold;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .writing-container_U {
@@ -364,6 +378,7 @@
     max-height: 355px;
     overflow-x: auto;
     border-collapse: collapse;
+    font-family: UTSansBold;
   }
   table td{
     height: 10px;
@@ -372,6 +387,7 @@
     border: 1px solid #000;
     text-align: center;
     font-size: 17px;
+    font-family: UTSansBold;
   }
 
   table th{
@@ -382,10 +398,11 @@
     padding: 15px;
     border: 1px solid #000;
     text-align: center;  
+    font-family: UTSansBold;
   }
 
   pre {
-    font-family: UT-Sans-TTF;
+    font-family: UTSansBold;
   }
 
   .rectangle2 {
@@ -406,6 +423,7 @@
     font-size: 18px;
     font-weight: bold;
     color: #000000;
+    font-family: UTSansBold;
   }
 }
 

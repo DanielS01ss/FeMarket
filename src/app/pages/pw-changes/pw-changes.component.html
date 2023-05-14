@@ -1,3 +1,5 @@
+<app-left-navbar></app-left-navbar>
+<div class="rectangle">
 <form [formGroup]="passwordForm" (ngSubmit)="onSubmit()">
     <label>
         Old Password
@@ -13,4 +15,5 @@
     </label>
     <button type="submit" [disabled]="passwordForm.invalid">Submit</button>
   </form>
-  
+  <div class='message1'>Password change</div>
+</div>
