@@ -38,3 +38,5 @@
   <button (click)="goToNextPage()" [disabled]="currentPage === size || (((rows.length / pageSize) - 1) < 0)">Next</button>
   </div>
 </div>
+
+<app-recommendeds *ngIf="!loading"></app-recommendeds>

@@ -26,6 +26,8 @@ import { ConfirmationComponent } from './pages/confirmation/confirmation.compone
 import { GraphsComponent } from './pages/graphs/graphs.component';
 import { NgxChartsModule }from '@swimlane/ngx-charts';
 import { NgChartsModule } from 'ng2-charts';import { SnippetComponent } from './pages/snippet/snippet.component';
+import { RecommendedsComponent } from './recommendeds/recommendeds.component';
+import { MachineLearningComponent } from './pages/machine-learning/machine-learning.component';
 
 
 
@@ -48,7 +50,9 @@ import { NgChartsModule } from 'ng2-charts';import { SnippetComponent } from './
     SuccessCardComponent,
     ConfirmationComponent,
     GraphsComponent,
-    SnippetComponent
+    SnippetComponent,
+    RecommendedsComponent,
+    MachineLearningComponent
   ],
   imports: [
     NgChartsModule,
