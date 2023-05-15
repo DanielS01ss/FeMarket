@@ -137,6 +137,7 @@ body {
     }
     a {
         font-size: 26px;
+        padding-bottom: 30px;
     }
     table {
         width: 90%;
@@ -159,4 +160,69 @@ body {
         font-size: 22px;
         margin-top: 30px;
     }
+}
+
+button {
+  border-radius: 9px;
+  border: 1px solid #ffffff;
+  background-color: #d4d0cd;
+  color: #ffffff;
+  padding: 5px 25px;
+  display: inline-block;
+  position: relative;
+  margin-top: 6%;
+  line-height: 5px;
+}
+button:hover{
+  background-color: #666;
+  color: white;
+
+}
+
+.usr_data {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 7px 1.5px rgba(0, 0, 0, 0.2);
+}
+
+.change_pass {
+  padding-top: 1%;
+}
+
+a.change_pass:hover {
+  color: #ff62009b;
+}
+
+@media (max-width: 990px) {
+  .usr_data {
+    border-style: solid;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 7px 1.5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 710px) {
+  .usr_data {
+    border-style: solid;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 7px 1.5px rgba(0, 0, 0, 0.2);
+  }
 }
