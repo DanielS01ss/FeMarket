@@ -12,11 +12,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-        node-version: 16
 
       - name: Build Docker image
-        run: docker build -t .
+        run: docker build -t front-end .
 
       - name: Log in to Docker Hub (optional)
         run: docker login -u your-dockerhub-username scr4pp -p ${{ secrets.DOCKERHUB_TOKEN }}
