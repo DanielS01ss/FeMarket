@@ -29,7 +29,7 @@ export class LeftNavbarComponent {
     navigateTo(option:number){
         switch(option){
           case 0:
-            this.router.navigate(["/view"]);
+            this.router.navigate(["/home"]);
             break;
           case 1:
             this.router.navigate(['/view']);
