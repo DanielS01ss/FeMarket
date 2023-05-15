@@ -20,12 +20,16 @@ export class AppComponent implements OnInit {
   private setLogoSrc(isLightMode: boolean) {
     const agora = document.getElementById('agora-logo') as HTMLImageElement;
     if (agora) {
-      const src = isLightMode ? 'assets/icons/agora.png' : 'assets/icons/agora_light.png';
+      const src = 'assets/icons/ilogo_ipad_black.png';
       this.renderer.setAttribute(agora, 'src', src);
       const alt = isLightMode ? 'Light Mode Logo' : 'Dark Mode Logo';
       this.renderer.setAttribute(agora, 'alt', alt);
+      agora.style.filter = isLightMode ? 'invert(1)' : 'none';
     }
-  }
+   }
+
+  
+  
 
   darkmode() {
     localStorage.setItem('theme', 'white');
