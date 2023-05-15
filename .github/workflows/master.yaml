@@ -1,0 +1,45 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t .
+
+      - name: Log in to Docker Hub (optional)
+        run: docker login -u your-dockerhub-username scr4pp -p ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Push Docker image to Docker Hub (optional)
+        run: docker push scr4pp/front-end
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH into remote server
+        uses: appleboy/ssh-action@master
+        with:
+          host: 185.146.86.118
+          username: root
+          password: ${{ secrets.SSH_PASSWORD }}
+
+          # Add other SSH options if necessary
+          # ssh_options: ""
+
+          # You can also specify a passphrase if your key is encrypted
+          # passphrase: ${{ secrets.SSH_PASSPHRASE }}
+
+          # Specify the command to run on the remote server
+          script: |
+            bash /deploy-fe.sh
