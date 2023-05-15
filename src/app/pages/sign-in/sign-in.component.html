@@ -28,7 +28,6 @@
             <img src="assets/icons/visibility_off.svg" id="visibility_on" (click)="toggleVisibilityOff()">
         </div>
         <div class="err-msg" *ngIf="form.get('password')?.touched && form.get('password')?.invalid">Password cannot be empty</div>
-        <div class="su"><input type="checkbox" name="remember_me" id="remember_me"> <label for="remember_me">Remember me</label></div>
         <div style="text-align: center;">
         <button class="btn btn-default" [disabled]="form.invalid" (click)="signin()">Sign In</button>
         </div>

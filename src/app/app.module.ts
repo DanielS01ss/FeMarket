@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
-import { PagesComponent } from './pages/pages.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
@@ -28,13 +27,13 @@ import { NgxChartsModule }from '@swimlane/ngx-charts';
 import { NgChartsModule } from 'ng2-charts';import { SnippetComponent } from './pages/snippet/snippet.component';
 import { RecommendedsComponent } from './recommendeds/recommendeds.component';
 import { MachineLearningComponent } from './pages/machine-learning/machine-learning.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PagesComponent,
     HomeComponent,
     SignInComponent,
     DashboardComponent,
@@ -66,7 +65,7 @@ import { MachineLearningComponent } from './pages/machine-learning/machine-learn
     NgxChartsModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
