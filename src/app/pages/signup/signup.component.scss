@@ -114,18 +114,7 @@
     background-color: #ffffff;
   }
   
-  h5 {
-    color: #000000;
-    font-family: "UTSansRegular";
-    font-size: 18px;
-    letter-spacing: 0.36px;
-    line-height: normal;
-    text-align: left;
-    // Text style for "Forgot pas"
-    font-style: normal;
-    //letter-spacing: normal;
-    //padding: auto;
-  }
+ 
   
   .FormCustom label {
     color: #000000;
@@ -336,6 +325,21 @@
     padding-left: 70px;
     color: var(--white);
     transform: translateY(-50px);
+  }
+  h6
+  {
+    font-size: 17px;
+    line-height: 10px;
+    font-weight: 500;
+    color: var(--white);
+  }
+  h5
+  {
+    font-size: 13px;
+    line-height: 10px;
+    font-weight: 450;
+    color: var(--white);
+    transform:translateY(6.5px);
   }
   /* media queery */
 @media (max-width: 1200px) {

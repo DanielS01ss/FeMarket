@@ -16,13 +16,13 @@
       <h1>Create an account</h1>
 
       <form class="FormCustom" [formGroup]="form">
-        <label for="username" style="color:var(--white)">Email</label>
+        <label for="username" style="color:var(--white)"><h6>Email</h6></label>
         <div class="input-icons">
           <input class="input-field" type="email" id="email" formControlName="email">
           <img src="assets/icons/@.svg">
         </div>
         <div class="err-msg" *ngIf="form.get('email')?.invalid  &&  form.get('email')?.touched">Please provide a valid email address</div>
-        <label for="username" style="color:var(--white)">Username</label>
+        <label for="username" style="color:var(--white)"><h6>Username</h6></label>
         <div class="input-icons">
           <input class="input-field" type="username" id="username" formControlName="username">
           <img src="assets/icons/username.svg">
@@ -31,7 +31,7 @@
         <div *ngIf="form.get('username')?.hasError('minlength')" class="err-msg">
           Username should be at least 3 characters long
         </div>
-        <label for="password" style="color:var(--white)">Password</label>
+        <label for="password" style="color:var(--white)"><h6>Password</h6></label>
         <div class="input-icons">
           <input class="input-field" type="password" id="password" formControlName="password">
           <img src="assets/icons/visibility_on.svg" id="visibility_off" (click)="toggleVisibilityOn()">
@@ -42,7 +42,7 @@
         </div>
 
         <div class="err-msg" *ngIf="form.get('password')?.touched && form.get('password')?.invalid">Password cannot be empty</div>
-        <div class="su"><input type="checkbox" name="remember_me" id="remember_me"> <label for="remember_me" style="color:var(--white)">Remember me</label></div>
+        <div class="su"><input type="checkbox" name="remember_me" id="remember_me"> <label for="remember_me" style="color:var(--white)"><h5>&nbsp;&nbsp;Remember me</h5></label></div>
         <div style="text-align: center;">
           <button class="btn btn-default" [disabled]="form.invalid" (click)="signUp()" style="color:var(--white)">Sign Up</button>
         </div>

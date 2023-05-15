@@ -1,42 +1,57 @@
+<section class="signup">
+    <div class="row">
+        <div class="col-md-6">
+          <div class="logo">
+            <img src="assets/logo_desktop_black.png" alt="Logo" style="margin-bottom:5px;" id="agora-logo">
+            <h1 class="text-uppercase" style="color:var(--white)">IESC - Agora</h1>
+            <h4 style="color:var(--white)">Turning data into value</h4>
+          </div> 
+        </div>
+  
+  </div>
+</section>
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-<div class="row">
-    <div class="col-md-6">
-<div class="sign_in_pannel">
-    <div class="logo">
-        <img src="assets/logo_desktop_black.png" alt="Logo">
-        <h5>IESC - Agora</h5>
-        <h6>Turning data into value</h6>
-    </div> 
+    <style>
+        @media (max-width: 975px) {
+          .logo,
+          .logo img,
+          .logo h1,
+          .logo h4 {
+            display: none;
+          }
+        }
+      </style>
+<div class="col-md-6">
+    <div class="sign_in_pannel">
+    
 
-    <h1>Welcome to IESC-Agora</h1>
-    <h3>Welcome back! Please enter your details.</h3>
+    <h1 style="font-size: 30px">Welcome back! Please enter your details.</h1>
     
     <form class="FormCustom" [formGroup]="form">
-        <label for="username">Email</label>
+        <label for="username" style="color:var(--white)"><h6>Email</h6></label>
         <div class="input-icons">
             <input class="input-field" type="email" id="username" formControlName="username">
             <img src="assets/icons/username.svg">
         </div>
         <div class="err-msg" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">Email should be not empty</div>
-        <label for="password">Password</label>
+        <label for="password" style="color:var(--white)"><h6>Password</h6></label>
         <div class="input-icons">
             <input class="input-field" type="password" id="password" formControlName="password">
             <img src="assets/icons/visibility_on.svg" id="visibility_off" (click)="toggleVisibilityOn()">
             <img src="assets/icons/visibility_off.svg" id="visibility_on" (click)="toggleVisibilityOff()">
         </div>
         <div class="err-msg" *ngIf="form.get('password')?.touched && form.get('password')?.invalid">Password cannot be empty</div>
-        <div class="su"><input type="checkbox" name="remember_me" id="remember_me"> <label for="remember_me">Remember me</label></div>
+        <div class="su"><input type="checkbox" name="remember_me" id="remember_me"> <label for="remember_me" style="color:var(--white)"><h5>&nbsp;&nbsp;Remember me</h5></label></div>
         <div style="text-align: center;">
-        <button class="btn btn-default" [disabled]="form.invalid" (click)="signin()">Sign In</button>
+        <button class="btn btn-default" [disabled]="form.invalid" (click)="signin()" style="color:var(--white)">Sign In</button>
         </div>
     </form>
     
 
-    <div class="su" id="sgn">Don't have an account? <a href="/sign-up">  Sign up</a></div>
+    <div class="su" id="sgn" style="color:var(--white)">Don't have an account? <a href="/sign-up" style="color:var(--white)">  Sign up</a></div>
 </div>
 </div>
-</div>
-    
+
