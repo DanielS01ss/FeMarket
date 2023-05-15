@@ -124,7 +124,7 @@ export class UploadComponent {
               );
           },
           (err) => {
-            alert('Data was not uploaded successfully!');
+            alert('Data was not uploaded successfully, because it has the file has the same name or it was a problem with the server!');
           }
         );
     }
