@@ -14,6 +14,10 @@ export class GraphsComponent implements OnInit{
 
   public barChartLegend = true;
   public barChartPlugins = [];
+  public chartColors: any[] = [
+    { 
+      backgroundColor:["#FF7360", "#6FC8CE", "#FAFFF2", "#FFFCC4", "#B9E8E0"] 
+    }];
   title = 'ng2-charts-demo';
 
   loading = true;
@@ -51,7 +55,8 @@ export class GraphsComponent implements OnInit{
       this.barChartData = {
         labels: [ ...this.priceData.map((elem) => {return elem.dataset_name})],
         datasets: [
-          { data: [ ...this.priceData.map((elem)=>{ return elem.price}) ], label: 'Tokens' },
+          { data: [ ...this.priceData.map((elem)=>{ return elem.price}) ], label: 'Tokens',
+          backgroundColor: "#00000" },
           
         ]
       };
@@ -67,7 +72,9 @@ export class GraphsComponent implements OnInit{
       this.barCharDataTransaction = {
         labels: [ ...Object.keys(this.popularData)],
         datasets: [
-          { data: [ ...Object.values(this.popularData) ], label: 'Tokens' },
+          { data: [ ...Object.values(this.popularData) ], label: 'Transcations',
+          backgroundColor: "#00000" 
+        },
           
         ]
       };

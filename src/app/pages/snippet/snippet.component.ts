@@ -41,10 +41,10 @@ export class SnippetComponent implements OnInit {
     this.tokens.checkToken();
     this.http.get(`http://185.146.86.118:5000/display_snippet?database_name=${author}&database_table=${dataset_name.replace('-db-index', '')}`, {headers: headers}).subscribe((response: any) => {
       const data = response['@list'];
-      this.columns = Object.keys(data[0]).map(key => key[0].toUpperCase() + key.slice(1).toLowerCase()).slice(1, 5);
+      this.columns = Object.keys(data[0]).map(key => key[0].toUpperCase() + key.slice(1).toLowerCase()).slice(1, 10);
       const int_data = [];
       for (let i of data) {
-        int_data.push(Object.values(i).slice(1, 5));
+        int_data.push(Object.values(i).slice(1, 10));
       }
       this.rows = int_data;
       this.size =  Math.ceil((this.rows.length / this.pageSize) - 1);

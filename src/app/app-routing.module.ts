@@ -24,7 +24,6 @@ const routes: Routes = [
   {path:'sign-up',component:SignupComponent},
   {path: 'dashboard', component: DashboardComponent,canActivate:[AuthGuard]},
   {path: 'user-profile', component: UserProfileComponent,canActivate:[AuthGuard]},
-  {path: 'user-profile-table', component: UserProfileTableComponent,canActivate:[AuthGuard]},
   {path: 'upload', component:UploadComponent,canActivate:[AuthGuard]},
   {path: 'view', component:ViewPageComponent,canActivate:[AuthGuard]},
   {path: 'pw-change', component: PwChangesComponent,canActivate:[AuthGuard]},
