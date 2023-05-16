@@ -46,4 +46,4 @@ jobs:
 
           # Specify the command to run on the remote server
           script: |
-            bash /deploy-fe.sh
+            bash /root/deploy-fe.sh
