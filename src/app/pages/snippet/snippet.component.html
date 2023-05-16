@@ -7,6 +7,18 @@
     <div></div>
   </div>
 
+/*
+<div class="btns">
+  <p *ngIf="!buy && !loading">Price: {{ tok }}</p>
+  <button class="buy" [disabled]="buy" *ngIf="!buy && !loading" (click)="buy_dataset()">Buy</button>
+  <select [(ngModel)]="selectedValue" *ngIf="buy && !loading">
+    <option value="json">JSON</option>
+    <option value="json-ld">JSON-LD</option>
+    <option value="csv">CSV</option>
+  </select>
+  <button class="download" *ngIf="buy && !loading" (click)="downlaod_data()">Download Dataset</button>
+</div>
+*/
 
 <div class="tb" *ngIf="!loading">
   <h1>{{ datasetName }}</h1>

@@ -3,7 +3,7 @@
 <div class="buttons-container">
     <button class="toggle-section-btn" [ngClass]="{'current':btnClicked === 1}" (click)="toggleChange(1)">See most expensive data</button>
     <button class="toggle-section-btn" [ngClass]="{'current':btnClicked === 2}" (click)="toggleChange(2)">See most transactioned data</button>
-</div>
+</div> 
 <div class="loading-spinner" *ngIf="loading">
     <div></div>
     <div></div>
@@ -18,7 +18,7 @@
         <p class="section-title">The most expensive datasets</p>
     </div>
 
-    <canvas baseChart
+    <canvas baseChart class="token_graph"
         [data]="barChartData"
         [options]="barChartOptions"
         [plugins]="barChartPlugins"
@@ -33,7 +33,7 @@
         <p class="section-title">The most transactioned datasets</p>
     </div>
 
-    <canvas baseChart
+    <canvas baseChart class="popular_graph"
         [data]="barCharDataTransaction"
         [options]="barChartOptions"
         [plugins]="barChartPlugins"

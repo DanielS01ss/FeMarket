@@ -20,7 +20,7 @@ export class LeftNavbarComponent {
         'Content-Type': 'application/json'
       });
       this.http.get('http://185.146.86.118:5000/get_balance', {headers:headers, observe:'response'}).subscribe((response: any) => {
-        this.balance = response.body['message'].split(':')[1].replace(' ', '');
+        this.balance = parseInt(response.body['message'].split(':')[1].replace(' ', ''));
       }, err => {
         console.error(err);
       })
@@ -29,7 +29,7 @@ export class LeftNavbarComponent {
     navigateTo(option:number){
         switch(option){
           case 0:
-            this.router.navigate(["/view"]);
+            this.router.navigate(["/home"]);
             break;
           case 1:
             this.router.navigate(['/view']);
@@ -46,6 +46,10 @@ export class LeftNavbarComponent {
           case 4:
             this.router.navigate(['/user-profile']);
             this.btnClickedService.updateClicked(4);
+            break;
+          case 6:
+            this.router.navigate(['/machine-learning']);
+            this.btnClickedService.updateClicked(6);
             break;
           default:
               this.router.navigate(['/view']);

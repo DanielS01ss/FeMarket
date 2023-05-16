@@ -13,7 +13,10 @@
     <div class="success-card-container">
         <h1> Succesfull sign up!</h1>
         <h3>Check your email box to validate your email</h3>
-        <img src="../../../assets/check-mark.gif" class="check-mark">
+        <form [formGroup]="form">
+          <input class="code-input"formControlName="code"/>
+          <button class="btn-code" [disabled]="form.get('code')?.invalid" (click)="postCode()">Send code!</button>
+        </form>
     </div>
     </div>
     </div>
