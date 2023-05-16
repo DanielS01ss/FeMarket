@@ -8,14 +8,14 @@
 <div class="content-profile" *ngIf="!loading">
     <img id="usr_img" src="assets/icons/username.svg">
     <h2>User:</h2>
-    <span>{{username}}</span>
+    <div class="usr_data"><span>{{username}}</span></div>
 
     <h2>E-mail:</h2>
-    <span>{{email}}</span>
+    <div class="usr_data"><span>{{email}}</span></div>
 
     <h2>Password:</h2>
-    <span>&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</span>
-    <a href="javascript:void(0)" (click)="updatePassword()">Click here to change your password</a>
+    <div class="usr_data"><span>&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</span></div>
+    <a class="change_pass" href="javascript:void(0)" (click)="updatePassword()">Click here to change your password</a>
 
     <h2>Transactions history:</h2>
     <table>
@@ -33,5 +33,5 @@
         </tbody>
     </table>
 
-    <a href="javascript:void(0)" class="delete_account" (click)="deleteAccount()">Delete account</a>
+    <button><a href="javascript:void(0)" class="delete_account" (click)="deleteAccount()">Delete account</a></button>
 </div>
