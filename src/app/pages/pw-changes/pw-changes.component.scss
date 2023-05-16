@@ -1,38 +1,64 @@
-
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 500px;
+@media (min-width: 800px) and (max-width: 1920px) {
+  .rectangle {
+    background-color: white;
+    width: 547px;
+    height: 808px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 50px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   }
-  
+
+  .message1 {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: UTSansBold;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   label {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 1rem;
     width: 100%;
+    font-size: 18px;
+    font-family: UTSansBold;
   }
-  
+
   input[type="password"] {
     padding: 0.5rem;
     font-size: 1rem;
     border-radius: 0.25rem;
     border: 2px solid #ddd;
     width: 100%;
+    text-align: center;
+    font-family: UTSansBold;
   }
-  
+
   input[type="password"]:focus {
     outline: none;
     border-color: #0066cc;
   }
-  
+
   button[type="submit"] {
+    position: absolute;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     border-radius: 0.25rem;
@@ -40,15 +66,100 @@
     background-color: #0066cc;
     color: #fff;
     cursor: pointer;
+    font-family: UTSansBold;
+    top: 120%;
   }
-  
+
   button[type="submit"]:hover {
     background-color: #0059b3;
   }
-  
+
   button[type="submit"]:disabled {
     background-color: #ddd;
     color: #999;
     cursor: not-allowed;
   }
-  
+}
+
+@media (max-width: 800px){
+  .rectangle {
+    background-color: white;
+    width: 547px;
+    height: 808px;
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .message1 {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: UTSansBold;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: 18px;
+    font-family: UTSansBold;
+  }
+
+  input[type="password"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: 2px solid #ddd;
+    width: 100%;
+    text-align: center;
+    font-family: UTSansBold;
+  }
+
+  input[type="password"]:focus {
+    outline: none;
+    border-color: #0066cc;
+  }
+
+  button[type="submit"] {
+    position: absolute;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: #0066cc;
+    color: #fff;
+    cursor: pointer;
+    font-family: UTSansBold;
+    top: 120%;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0059b3;
+  }
+
+  button[type="submit"]:disabled {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+  }
+}

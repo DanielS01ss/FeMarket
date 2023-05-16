@@ -15,6 +15,43 @@
     margin: auto;
   }
   
+
+  .code-input{
+    border: 1px #000000 solid;
+    border-radius: 20px;
+    padding: 10px;
+    align-self: flex-start;
+    text-align: center;
+    text-decoration: none;
+    width: 80%;
+    margin: auto;
+    margin-left:80px;
+  }
+  
+  .btn-code{
+   padding:10px;
+    border-radius: 9px;
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "UTSansMedium";
+    padding: 5px 35px;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top:20px;
+    margin-left: 40%;
+  }
+
+  .btn-code:hover{
+    background-color: #666;
+    color: white;
+  }
+
+  .btn-code:disabled{
+    cursor: auto;
+    background-color: #666;
+  }
+
   .check-mark{
     margin-left:220px;
   }
@@ -60,7 +97,6 @@
     }
   }
 
-  
   .logo h5 {
     white-space: nowrap;
     color: #000000;

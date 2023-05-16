@@ -16,7 +16,7 @@ export class SignupComponent {
       email:['',[Validators.required,Validators.email]],
       username:['',[Validators.required,Validators.minLength(3)]],
       password:['',[Validators.required,Validators.minLength(6)]]
-    })
+    }) 
   }
 
   signUp(){
@@ -25,7 +25,7 @@ export class SignupComponent {
       email:this.form.get('email')?.value,
       password:this.form.get('password')?.value
     }
-  
+  localStorage.setItem('email',newUser.email);
     this.http.post('http://185.146.86.118:5000/signup',newUser).subscribe((data)=>{this.router.navigate(['success'])},(err)=>{
       console.log(err);
       alert('A fost o eroare la conectarea la server');

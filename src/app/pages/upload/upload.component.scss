@@ -1,117 +1,88 @@
 @media (min-width: 800px) and (max-width: 1920px) {
   body {
     overflow: hidden;
-    background-color: #ECE9E6;
-    background-repeat: repeat;
-    background-size: 100vw 100vh;
   }
-
-  .Blur_U-container {
-    position: fixed;
-    top: 113px;
-    right: -200px;
-    overflow: hidden;
-  }
-
-  .Blur_U {
-    width: 1200px;
-    height: 1577.48px;
-    object-fit: contain;
-    overflow: hidden;
-  }
-
   .csv_icon-container {
     display: flex;
     position: fixed;
-    top: 260px;
-    left: 356px;
-
+    top: 240px;
+    left: 886px;
   }
 
   .csv_icon {
     width: 91px;
     height: 91px;
+    scale: 80%;
   }
 
   .json_icon-container {
     display: flex;
     position: fixed;
-    top: 260px;
-    left: 464px;
-
+    top: 240px;
+    left: 954px;
   }
 
   .json_icon {
     width: 91px;
     height: 91px;
-  }
-
-  .xml_icon-container {
-    display: flex;
-    position: fixed;
-    top: 260px;
-    left: 572px;
-
-  }
-
-  .xml_icon {
-    width: 95px;
-    height: 95px;
+    scale: 80%;
   }
 
   .uplaod_data_btn {
     position: absolute;
-    height: 86px;
-    width: 457px;
-    top: 0;
+    height: 76px;
+    width: 357px;
     top: 60px;
-    left: 860px;
+    left: 995px;
     right: 0;
     cursor: pointer;
     border: 1.5px solid #000000;
     border-radius: 50px;
     color: #000000;
     background-color: #D2CFCC;
-    font-size: 45px;
+    font-size: 38px;
     font-weight: 700;
     font-family: 'UT-Sans-TFF', sans-serif;
     padding-left: 60px;
+    font-family: UTSansBold;
   }
 
   .uplaod_data_btn:hover {
     background-color: #ffffff;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .browse_files_btn {
     position: absolute;
-    height: 86px;
-    width: 457px;
-    top: 0;
+    height: 76px;
+    width: 357px;
     top: 60px;
-    left: 310px;
+    left: 570px;
     right: 0;
     cursor: pointer;
     border: 1.5px solid #000000;
     border-radius: 50px;
     color: #000000;
     background-color: #D2CFCC;
-    font-size: 45px;
+    font-size: 38px;
     font-weight: 700;
     font-family: 'UT-Sans-TFF', sans-serif;
     padding-left: 60px;
+    font-family: UTSansBold;
   }
 
   .browse_files_btn:hover {
     background-color: #ffffff;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .upload_icon-container {
     display: flex;
     position: fixed;
-    top: 63px;
-    left: 910px;
+    top: 60px;
+    left: 1020px;
     z-index: 50;
     border-radius: 50px;
   }
@@ -119,13 +90,14 @@
   .upload_icon {
     width: 86px;
     height: 86px;
+    scale: 65%;
   }
 
   .browse_icon-container {
     display: flex;
     position: fixed;
-    top: 70px;
-    left: 350px;
+    top: 65px;
+    left: 590px;
     z-index: 50;
     border-radius: 50px;
   }
@@ -134,28 +106,31 @@
     width: 70px;
     height: 70px;
     scale: 90%;
+    scale: 65%;
   }
 
   .message1 {
     position: absolute;
     top: 180px;
-    left: 321px;
-    font-size: 40px;
+    left: 770px;
+    font-size: 35px;
     font-family: Arial;
     align-items: center;
     font-weight: bold;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .message2 {
     position: absolute;
-    top: 360px;
-    left: 321px;
-    font-size: 40px;
+    top: 320px;
+    left: 676px;
+    font-size: 35px;
     font-family: Arial;
     align-items: center;
     font-weight: bold;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .writing-container_U {
@@ -172,22 +147,27 @@
   }
 
   .rectangle1 {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
     position: fixed;
-    top: 434px;
-    left: 237px;
-    width: 664px;
-    height: 491px;
-    background-color: rgba(210, 207, 204, 0.500);
+    top: 404px;
+    left: 53%;
+    width: 80vw;
+    height: 391px;
+    background-color: inherit;
     border: 1px solid #000;
     padding: 10px;
-    overflow-x: auto;
+    overflow-y: auto;
+    transform: translate(-50%);
   }  
   
   table{
-    max-width: 664px;
-    max-height: 491px;
-    overflow-x: auto;
+    max-width: 564px;
+    max-height: 391px;
+    overflow-y: scroll;
     border-collapse: collapse;
+    font-family: UTSansBold;
   }
   table td{
     height: 10px;
@@ -195,6 +175,7 @@
     padding: 20px;
     border: 1px solid #000;
     text-align: center;
+    font-family: UTSansBold;
   }
 
   table th{
@@ -203,115 +184,93 @@
     padding: 15px;
     border: 1px solid #000;
     text-align: center;  
+    font-family: UTSansBold;
   }
 
   .rectangle2 {
+    border-radius: 10px;
     position: fixed;
-    top: 434px;
-    left: 969px;
-    width: 664px;
-    height: 491px;
-    background-color: rgba(210, 207, 204, 0.500);
-    border: 1px solid #000;
+    top: 800px;
+    left: 667px;
+    width: 564px;
+    height: 80px;
+    background-color: inherit;
+    border: 0px solid #000;
     padding: 10px;
+  }
+
+  p{
+    font-family: UTSansBold;;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
   }
 }
 
 @media (max-width: 800px) {
   body {
     overflow: hidden;
-    background-color: #ECE9E6;
-    background-repeat: repeat;
-    background-size: 100vw 100vh;
   }
-
-  .Blur_U-container {
-    position: fixed;
-    top: 24px;
-    left: -210.13px;
-    overflow: hidden;
-  }
-
-  .Blur_U {
-    width: 1200px;
-    height: 1577.48px;
-    object-fit: contain;
-    overflow: hidden;
-  }
-
   .csv_icon-container {
     display: flex;
     position: fixed;
-    top: 351px;
-    left: 249px;
+    top: 321px;
+    left: 349px;
 
   }
 
   .csv_icon {
     width: 71px;
     height: 71px;
-    scale: 1.1;
+    scale: 0.8;
   }
 
   .json_icon-container {
     display: flex;
     position: fixed;
-    top: 351px;
-    left: 349px;
-
+    top: 321px;
+    left: 439px;
   }
 
   .json_icon {
     width: 71px;
     height: 71px;
-    scale: 1.1;
+    scale: 0.8;
   }
-
-  .xml_icon-container {
-    display: flex;
-    position: fixed;
-    top: 351px;
-    left: 449px;
-
-  }
-
-  .xml_icon {
-    width: 71px;
-    height: 71px;
-    scale: 1.1;
-  }
-
+  
   .browse_files_btn {
     position: absolute;
-    height: 99px;
-    width: 374px;
+    height: 79px;
+    width: 350px;
     top: 0;
     top: 50px;
-    left: 197px;
+    left: 260px;
     right: 0;
     cursor: pointer;
     border: 1.5px solid #000000;
     border-radius: 50px;
     color: #000000;
     background-color: #D2CFCC;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
     font-family: 'Arial';
     padding-left: 60px;
+    font-family: UTSansBold;
   }
 
   .browse_files_btn:hover {
     background-color: #ffffff;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .uplaod_data_btn {
     position: absolute;
-    height: 99px;
-    width: 374px;
+    height: 79px;
+    width: 350px;
     top: 0;
     top: 170px;
-    left: 197px;
+    left: 260px;
     right: 0;
     cursor: pointer;
     border: 1.5px solid #000000;
@@ -322,18 +281,20 @@
     font-weight: 700;
     font-family: 'Arial';
     padding-left: 60px;
+    font-family: UTSansBold;
   }
 
   .uplaod_data_btn:hover {
     background-color: #ffffff;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .upload_icon-container {
     display: flex;
     position: fixed;
-    top: 178px;
-    left: 230px;
+    top: 170px;
+    left: 295px;
     z-index: 50;
 
   }
@@ -341,13 +302,14 @@
   .upload_icon {
     width: 67px;
     height: 67px;
+    scale: 0.8;
   }
 
   .browse_icon-container {
     display: flex;
     position: fixed;
-    top: 67px;
-    left: 225px;
+    top: 56px;
+    left: 295px;
     z-index: 50;
     border-radius: 50px;
   }
@@ -355,29 +317,31 @@
   .browse_icon {
     width: 70px;
     height: 70px;
-    scale: 90%;
+    scale: 0.8;
   }
 
   .message1 {
     position: absolute;
-    top: 280px;
-    left: 120px;
+    top: 270px;
+    left: 280px;
     font-size: 29px;
     font-family: Arial;
     align-items: center;
     font-weight: bold;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .message2 {
     position: absolute;
-    top: 460px;
-    left: 221px;
-    font-size: 40px;
+    top: 390px;
+    left: 195px;
+    font-size: 30px;
     font-family: Arial;
     align-items: center;
     font-weight: bold;
     color: #000000;
+    font-family: UTSansBold;
   }
 
   .writing-container_U {
@@ -394,21 +358,27 @@
   }
 
   .rectangle1 {
+    display: flex;
+    justify-content: center;
     position: fixed;
-    top: 560px;
-    left: 67px;
-    width: 288px;
-    height: 305px;
-    background-color: rgba(210, 207, 204, 0.500);
+    top: 460px;
+    left: 55%;
+    width: 548px;
+    height: 355px;
+    background-color: inherit;
     border: 1px solid #000;
     padding: 10px;
-    overflow: auto;
+    overflow-y: auto;
+    border-radius: 10px;
+    transform: translate(-50%);
   }
 
   table{
-    max-width: 228px;
+    max-width: 548px;
+    max-height: 355px;
     overflow-x: auto;
     border-collapse: collapse;
+    font-family: UTSansBold;
   }
   table td{
     height: 10px;
@@ -417,6 +387,7 @@
     border: 1px solid #000;
     text-align: center;
     font-size: 17px;
+    font-family: UTSansBold;
   }
 
   table th{
@@ -427,253 +398,264 @@
     padding: 15px;
     border: 1px solid #000;
     text-align: center;  
+    font-family: UTSansBold;
   }
 
   pre {
-    font-family: UT-Sans-TTF;
+    font-family: UTSansBold;
   }
 
   .rectangle2 {
     position: fixed;
-    top: 560px;
-    left: 400px;
-    width: 288px;
-    height: 305px;
+    top: 820px;
+    left: 157px;
+    width: 548px;
+    height: 80px;
     background-color: rgba(236, 233, 230, 0.500);
     border: 1px solid #000;
     padding: 10px;
+    background-color: inherit;
+    border: 0px solid #000;
+  }
+
+    p{
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    font-family: UTSansBold;
   }
 }
 
-@media (max-width: 400px) {
-  body {
-    overflow: hidden;
-    background-color: #ECE9E6;
-    background-repeat: repeat-y;
-    background-size: 100vw 100vh;
-  }
+// @media (max-width: 400px) {
+//   body {
+//     overflow: hidden;
+//     background-color: #ECE9E6;
+//     background-repeat: repeat-y;
+//     background-size: 100vw 100vh;
+//   }
 
-  .Blur_U-container {
-    position: fixed;
-    top: -32px;
-    left: -507.13px;
-    overflow: hidden;
-    z-index: 0;
-  }
+//   .Blur_U-container {
+//     position: fixed;
+//     top: -32px;
+//     left: -507.13px;
+//     overflow: hidden;
+//     z-index: 0;
+//   }
 
-  .Blur_U {
-    width: 1200px;
-    height: 1577.48px;
-    object-fit: contain;
-    overflow: hidden;
-  }
+//   .Blur_U {
+//     width: 1200px;
+//     height: 1577.48px;
+//     object-fit: contain;
+//     overflow: hidden;
+//   }
 
-  .csv_icon-container {
-    display: flex;
-    position: absolute;
-    top: 256px;
-    left: 70px;
-    z-index: 1;
+//   .csv_icon-container {
+//     display: flex;
+//     position: absolute;
+//     top: 256px;
+//     left: 70px;
+//     z-index: 1;
 
-  }
+//   }
 
-  .csv_icon {
-    width: 75px;
-    height: 70px;
-    scale: 85%;
-  }
+//   .csv_icon {
+//     width: 75px;
+//     height: 70px;
+//     scale: 85%;
+//   }
 
-  .json_icon-container {
-    display: flex;
-    position: absolute;
-    top: 256px;
-    left: 230px;
-    z-index: 1;
-  }
+//   .json_icon-container {
+//     display: flex;
+//     position: absolute;
+//     top: 256px;
+//     left: 230px;
+//     z-index: 1;
+//   }
 
-  .json_icon {
-    width: 75px;
-    height: 70px;
-    scale: 85%;
-  }
+//   .json_icon {
+//     width: 75px;
+//     height: 70px;
+//     scale: 85%;
+//   }
 
-  .xml_icon-container {
-    display: flex;
-    position: absolute;
-    top: 256px;
-    left: 150px;
-    z-index: 1;
-  }
+//   .xml_icon-container {
+//     display: flex;
+//     position: absolute;
+//     top: 256px;
+//     left: 150px;
+//     z-index: 1;
+//   }
 
-  .xml_icon {
-    width: 75px;
-    height: 70px;
-    scale: 85%;
-  }
+//   .xml_icon {
+//     width: 75px;
+//     height: 70px;
+//     scale: 85%;
+//   }
 
-  .uplaod_data_btn {
-    position: absolute;
-    height: 69px;
-    width: 300px;
-    top: 0;
-    top: 127px;
-    left: 35px;
-    right: 0;
-    cursor: pointer;
-    border: 1.5px solid #000000;
-    border-radius: 50px;
-    color: #000000;
-    background-color: #D2CFCC;
-    font-size: 25px;
-    font-weight: 700;
-    font-family: 'Arial';
-    padding-left: 50px;
-  }
+//   .uplaod_data_btn {
+//     position: absolute;
+//     height: 69px;
+//     width: 300px;
+//     top: 0;
+//     top: 127px;
+//     left: 35px;
+//     right: 0;
+//     cursor: pointer;
+//     border: 1.5px solid #000000;
+//     border-radius: 50px;
+//     color: #000000;
+//     background-color: #D2CFCC;
+//     font-size: 25px;
+//     font-weight: 700;
+//     font-family: 'Arial';
+//     padding-left: 50px;
+//   }
 
-  .uplaod_data_btn:hover {
-    background-color: #ffffff;
-    color: #000000;
-  }
+//   .uplaod_data_btn:hover {
+//     background-color: #ffffff;
+//     color: #000000;
+//   }
 
-  .browse_files_btn {
-    position: absolute;
-    height: 69px;
-    width: 300px;
-    top: 0;
-    top: 47px;
-    left: 35px;
-    right: 0;
-    cursor: pointer;
-    border: 1.5px solid #000000;
-    border-radius: 50px;
-    color: #000000;
-    background-color: #D2CFCC;
-    font-size: 25px;
-    font-weight: 700;
-    font-family: 'Arial';
-    padding-left: 50px;
-  }
+//   .browse_files_btn {
+//     position: absolute;
+//     height: 69px;
+//     width: 300px;
+//     top: 0;
+//     top: 47px;
+//     left: 35px;
+//     right: 0;
+//     cursor: pointer;
+//     border: 1.5px solid #000000;
+//     border-radius: 50px;
+//     color: #000000;
+//     background-color: #D2CFCC;
+//     font-size: 25px;
+//     font-weight: 700;
+//     font-family: 'Arial';
+//     padding-left: 50px;
+//   }
 
-  .upload_icon-container {
-    display: flex;
-    position: absolute;
-    top: 122px;
-    left: 65px;
-    z-index: 50;
-    border-radius: 50px;
-    scale: 90%;
-  }
+//   .upload_icon-container {
+//     display: flex;
+//     position: absolute;
+//     top: 122px;
+//     left: 65px;
+//     z-index: 50;
+//     border-radius: 50px;
+//     scale: 90%;
+//   }
 
-  .upload_icon {
-    width: 70px;
-    height: 70px;
-    scale: 90%;
-  }
+//   .upload_icon {
+//     width: 70px;
+//     height: 70px;
+//     scale: 90%;
+//   }
 
-  .browse_files_btn:hover {
-    background-color: #ffffff;
-    color: #000000;
-  }
+//   .browse_files_btn:hover {
+//     background-color: #ffffff;
+//     color: #000000;
+//   }
 
-  .message1 {
-    display: none;
-    position: absolute;
-    top: 323px;
-    left: 125px;
-    font-size: 29px;
-    font-family: Arial;
-    align-items: center;
-    font-weight: bold;
-    color: #000000;
-  }
+//   .message1 {
+//     display: none;
+//     position: absolute;
+//     top: 323px;
+//     left: 125px;
+//     font-size: 29px;
+//     font-family: Arial;
+//     align-items: center;
+//     font-weight: bold;
+//     color: #000000;
+//   }
 
-  .message2 {
-    position: absolute;
-    top: 340px;
-    left: 100px;
-    font-size: 20px;
-    font-family: Arial;
-    align-items: center;
-    font-weight: bold;
-    color: #000000;
-  }
+//   .message2 {
+//     position: absolute;
+//     top: 340px;
+//     left: 100px;
+//     font-size: 20px;
+//     font-family: Arial;
+//     align-items: center;
+//     font-weight: bold;
+//     color: #000000;
+//   }
 
-  .writing-container_U {
-    position: absolute;
-    display: flex;
-    top: 210px;
-    left: 100px;
-    z-index: 1;
-    scale: 110%;
-  }
+//   .writing-container_U {
+//     position: absolute;
+//     display: flex;
+//     top: 210px;
+//     left: 100px;
+//     z-index: 1;
+//     scale: 110%;
+//   }
 
-  .writing_U {
-    width: 156px;
-    height: 35px;
-    object-fit: contain;
-    align-items: center;
-  }
+//   .writing_U {
+//     width: 156px;
+//     height: 35px;
+//     object-fit: contain;
+//     align-items: center;
+//   }
 
-  .browse_icon-container {
-    display: flex;
-    position: absolute;
-    top: 48px;
-    left: 65px;
-    z-index: 50;
-    border-radius: 50px;
-    scale: 90%;
-  }
+//   .browse_icon-container {
+//     display: flex;
+//     position: absolute;
+//     top: 48px;
+//     left: 65px;
+//     z-index: 50;
+//     border-radius: 50px;
+//     scale: 90%;
+//   }
 
-  .browse_icon {
-    width: 70px;
-    height: 70px;
-    scale: 90%;
-  }
+//   .browse_icon {
+//     width: 70px;
+//     height: 70px;
+//     scale: 90%;
+//   }
 
-  .rectangle1 {
-    position: absolute;
-    top: 370px;
-    left: 40px;
-    width: 288px;
-    height: 225px;
-    background-color: rgba(210, 207, 204, 0.500);
-    border: 1px solid #000;
-    padding: 10px;
-    overflow: auto;
-  }
+//   .rectangle1 {
+//     position: absolute;
+//     top: 370px;
+//     left: 40px;
+//     width: 288px;
+//     height: 225px;
+//     background-color: rgba(210, 207, 204, 0.500);
+//     border: 1px solid #000;
+//     padding: 10px;
+//     overflow: auto;
+//   }
 
-  table{
-    max-width: 228px;
-    overflow-x: auto;
-    border-collapse: collapse;
-  }
-  table td{
-    height: 10px;
-    width: 15px;
-    padding: 10px;
-    border: 1px solid #000;
-    text-align: center;
-    font-size: 12px;
-  }
+//   table{
+//     max-width: 228px;
+//     overflow-x: auto;
+//     border-collapse: collapse;
+//   }
+//   table td{
+//     height: 10px;
+//     width: 15px;
+//     padding: 10px;
+//     border: 1px solid #000;
+//     text-align: center;
+//     font-size: 12px;
+//   }
 
-  table th{
-    padding: 10px;
-    font-size: 12px;
-    height: 10px;
-    width: 15px;
-    padding: 15px;
-    border: 1px solid #000;
-    text-align: center;  
-  }
+//   table th{
+//     padding: 10px;
+//     font-size: 12px;
+//     height: 10px;
+//     width: 15px;
+//     padding: 15px;
+//     border: 1px solid #000;
+//     text-align: center;  
+//   }
 
-  .rectangle2 {
-    position: absolute;
-    top: 620px;
-    left: 40px;
-    width: 288px;
-    height: 225px;
-    background-color: rgba(210, 207, 204, 0.500);
-    border: 1px solid #000;
-    padding: 10px;
-  }
-}
+//   .rectangle2 {
+//     position: absolute;
+//     top: 620px;
+//     left: 40px;
+//     width: 288px;
+//     height: 225px;
+//     background-color: rgba(210, 207, 204, 0.500);
+//     border: 1px solid #000;
+//     padding: 10px;
+//   }
+// }

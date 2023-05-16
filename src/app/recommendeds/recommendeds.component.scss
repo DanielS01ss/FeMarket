@@ -1,0 +1,35 @@
+.recommended-card{
+    background-color: #fff;
+    position: absolute;
+    right: 40px;
+    width: 400px;
+    float: right;
+    top:200px;
+    height: 500px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.recommended-title{
+    margin-top:20px;
+}
+
+.recommended-item{
+    width: fit-content;
+    padding:10px;
+    margin-left: 6px;
+    margin-right: 4px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border:1px solid #000;
+    background-color: rgb(231, 255, 247);
+}
+
+.recommended-item-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
