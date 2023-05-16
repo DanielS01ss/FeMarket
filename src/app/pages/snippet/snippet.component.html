@@ -1,5 +1,5 @@
 <app-left-navbar></app-left-navbar>
-<h1>{{ datasetName }}</h1>
+
 <div class="loading-spinner" *ngIf="loading">
     <div></div>
     <div></div>
@@ -7,17 +7,11 @@
     <div></div>
   </div>
 
-<div class="btns">
-  <button class="buy" [disabled]="buy" *ngIf="!loading" (click)="buy_dataset()">Buy</button>
-  <select [(ngModel)]="selectedValue" *ngIf="buy && !loading">
-    <option value="json">JSON</option>
-    <option value="json-ld">JSON-LD</option>
-    <option value="csv">CSV</option>
-  </select>
-  <button class="download" *ngIf="buy && !loading" (click)="downlaod_data()">Download Dataset</button>
-</div>
 
 <div class="tb" *ngIf="!loading">
+  <h1>{{ datasetName }}</h1>
+  <div class="table-container">
+    
     <table id = 'tabel'>
       <thead>
         <tr>
@@ -31,7 +25,20 @@
       </tbody>
     </table>
     <div class="mat-paginator-navigation">
-      <button (click)="goToPreviousPage()" [disabled]="currentPage === 0">Previous</button>
-      <button (click)="goToNextPage()" [disabled]="currentPage === size || (((rows.length / pageSize) - 1) < 0)">Next</button>
+      <button (click)="goToPreviousPage()" [disabled]="currentPage === 0"> << </button>
+      <button (click)="goToNextPage()" [disabled]="currentPage === size || (((rows.length / pageSize) - 1) < 0)"> >> </button>
     </div>
+    
+    </div>
+    <div class="btns">
+      <button class="buy" [disabled]="buy" *ngIf="!loading" (click)="buy_dataset()">Buy</button>
+      <select [(ngModel)]="selectedValue" *ngIf="buy && !loading">
+        <option value="json">JSON</option>
+        <option value="json-ld">JSON-LD</option>
+        <option value="csv">CSV</option>
+      </select>
+      <button class="download" *ngIf="buy && !loading" (click)="downlaod_data()">Download Dataset</button>
+    </div>
+    
+    
 </div>
